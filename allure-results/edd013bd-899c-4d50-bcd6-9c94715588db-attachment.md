@@ -1,0 +1,1590 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Dropdowns.spec.js >> Dropdowns
+- Location: tests\Dropdowns.spec.js:3:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('li.as-item').first()
+Expected: visible
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" locator('li.as-item').first() with timeout 5000ms
+  - waiting for locator('li.as-item').first()
+  - Test ended.
+
+```
+
+```yaml
+- banner:
+  - link "GEN X EVO ACADEMY — home":
+    - /url: /
+  - text: Practice Playground
+  - navigation "Primary":
+    - link "Home":
+      - /url: /
+    - link "Practice":
+      - /url: /practice.html
+    - button "Products":
+      - text: Products
+      - img
+    - button "API":
+      - text: API
+      - img
+    - button "Advanced":
+      - text: Advanced
+      - img
+    - link "Courses":
+      - /url: /courses.html
+    - link "Blogs":
+      - /url: /blogs.html
+    - link "Interview Hub":
+      - /url: /interview-hub.html
+    - link "About":
+      - /url: /about.html
+    - link "Contact":
+      - /url: /contact.html
+  - button "Toggle theme":
+    - img
+  - link "Login":
+    - /url: /login.html?redirect=%2Fpractice.html%23section-dropdowns
+- complementary "Mobile navigation":
+  - text: Menu
+  - button "Close":
+    - img
+  - link "Home":
+    - /url: /
+  - link "Practice":
+    - /url: /practice.html
+  - text: Products
+  - link "Commerce":
+    - /url: /shop.html
+  - link "OAuth Platform":
+    - /url: /oauth/
+  - link "CineVerse":
+    - /url: /cineverse/index.html
+  - link "Automation Arena":
+    - /url: /arena.html
+  - text: API
+  - link "Authentication":
+    - /url: /authentication-state-lab.html
+  - link "HTTP Status":
+    - /url: /http-status-lab.html
+  - link "OTP & TOTP":
+    - /url: /otp-lab.html
+  - text: Advanced
+  - link "Locators":
+    - /url: /locators-lab.html
+  - link "Shadow DOM":
+    - /url: /shadow-dom-lab.html
+  - link "Infinite Scroll":
+    - /url: /infinite-scroll.html
+  - link "Upload & Download":
+    - /url: /excel-upload-download-lab.html
+  - link "Cookies":
+    - /url: /cookies-lab.html
+  - link "Network":
+    - /url: /network-lab.html
+  - link "Captcha":
+    - /url: /captcha-lab.html
+  - link "Honeypot":
+    - /url: /honeypot-lab.html
+  - link "Proxy & SSL":
+    - /url: /proxy-ssl-lab.html
+  - link "Courses":
+    - /url: /courses.html
+  - link "Blogs":
+    - /url: /blogs.html
+  - link "Interview Hub":
+    - /url: /interview-hub.html
+  - link "About":
+    - /url: /about.html
+  - link "Contact":
+    - /url: /contact.html
+  - link "Login":
+    - /url: /login.html?redirect=%2Fpractice.html%23section-dropdowns
+- navigation "Breadcrumb":
+  - link "Home":
+    - /url: /
+  - text: /
+  - link "Practice Platform":
+    - /url: /catalog-practice.html
+  - text: / Practice Playground
+- complementary "Practice Playground sections":
+  - paragraph: Modules
+  - button "01 Form Controls"
+  - button "02 Dropdowns" [expanded]
+  - list:
+    - listitem:
+      - link "Static Dropdowns":
+        - /url: "#section-dropdowns"
+    - listitem:
+      - link "Bootstrap Dropdown":
+        - /url: "#section-bootstrap-dropdown"
+    - listitem:
+      - link "Auto Suggestive":
+        - /url: "#section-autosuggest-dropdown"
+    - listitem:
+      - link "Dependent Dropdown":
+        - /url: "#section-dependent-dropdown"
+    - listitem:
+      - link "Searchable Dropdown":
+        - /url: "#section-searchable-dropdown"
+  - button "03 File Handling"
+  - button "04 Tables"
+  - button "05 Dialogs & Interactions"
+  - button "06 Browser Context, Tabs & Windows"
+  - button "07 Frames & Embedded Content"
+  - button "08 Calendars & Date Pickers"
+  - button "09 Advanced UI Elements"
+  - button "10 Labs & Real-World Automation"
+- main:
+  - paragraph: Module 1
+  - heading "Form Controls" [level=2]
+  - paragraph: Eight focused lessons on the controls every form-based test touches — from text inputs through to elements that appear only after an asynchronous call.
+  - heading "Text Inputs" [level=2]
+  - text: Name
+  - textbox "Name":
+    - /placeholder: Enter your name
+  - text: Email
+  - textbox "Email":
+    - /placeholder: Enter your email
+  - text: Address
+  - textbox "Address":
+    - /placeholder: Enter your address
+  - button "Submit"
+  - button "Reset"
+  - status
+  - heading "Radio Buttons" [level=2]
+  - group "Gender":
+    - text: Gender
+    - radio "Male"
+    - text: Male
+    - radio "Female"
+    - text: Female
+    - radio "Non-binary / Prefer not to say"
+    - text: Non-binary / Prefer not to say
+  - button "Learn More Labels, validation, radio groups and the locators that survive a redesign"
+  - heading "Checkboxes" [level=2]
+  - group "Available days":
+    - text: Available days
+    - checkbox "Select all days"
+    - text: Select All
+    - checkbox "Sunday"
+    - text: Sunday
+    - checkbox "Monday"
+    - text: Monday
+    - checkbox "Tuesday"
+    - text: Tuesday
+    - checkbox "Wednesday"
+    - text: Wednesday
+    - checkbox "Thursday"
+    - text: Thursday
+    - checkbox "Friday"
+    - text: Friday
+    - checkbox "Saturday"
+    - text: Saturday
+  - heading "Toggle Switches" [level=2]
+  - paragraph: Enable Notifications
+  - paragraph: Get notified about test runs and results.
+  - checkbox "Enable Notifications"
+  - paragraph: Email Alerts
+  - paragraph: Receive a daily summary by email.
+  - checkbox "Email Alerts" [checked]
+  - paragraph: Auto Save
+  - paragraph: Automatically save your progress as you go.
+  - checkbox "Auto Save"
+  - button "Learn More Group selection, the indeterminate state, and why a toggle is still a checkbox"
+  - heading "Multi Selects" [level=2]
+  - text: Clothing brands
+  - listbox "Clothing brands":
+    - option "Nike"
+    - option "Adidas"
+    - option "Puma"
+    - option "Zara"
+    - option "Puma"
+    - option "Zara"
+    - option "Levi's"
+    - option "H&M"
+    - option "Uniqlo"
+  - paragraph: "Tip: Hold Ctrl/Cmd to select multiple. Puma and Zara appear twice — same label, different value."
+  - heading "Tooltip" [level=2]
+  - paragraph: The tooltip is only in the DOM while the trigger is hovered or focused — so a test has to hover first, then assert.
+  - button "Delivery estimate"
+  - paragraph: Hover the button (or focus it with Tab).
+  - paragraph: "Tooltip state: hidden"
+  - button "Learn More Duplicate option text, strict mode, and elements that only exist while hovered"
+  - heading "Show / Hide Elements" [level=2]
+  - paragraph:
+    - text: The target starts
+    - strong: visible
+    - text: .
+    - emphasis: Hide
+    - text: applies the
+    - code: hidden
+    - text: attribute, so the field genuinely leaves the accessibility tree — not just the screen. Every click is acknowledged in the log below, including a click that changes nothing.
+  - button "Hide Element"
+  - button "Show Element"
+  - text: Target field
+  - textbox "Target field":
+    - /placeholder: I disappear when you click Hide
+  - paragraph: "Target state: visible"
+  - status: No clicks yet.
+  - heading "Hidden Elements & AJAX" [level=2]
+  - paragraph: Two controls start hidden, and the content block only exists after an asynchronous round trip finishes.
+  - text: Input Box 1
+  - textbox "Input Box 1"
+  - checkbox "Checkbox 1"
+  - text: Checkbox 1
+  - button "Toggle Input Box 2"
+  - button "Toggle Checkbox 2"
+  - button "Load AJAX Content"
+  - paragraph:
+    - text: "Status:"
+    - status: Ready
+  - text: No content loaded yet.
+  - button "Learn More Hidden versus absent, attached versus visible, and waiting without a fixed timeout"
+  - paragraph: Module 2
+  - heading "Dropdowns" [level=2]
+  - paragraph: Native selects and the four custom dropdown patterns you meet most often in real applications.
+  - heading "Static Dropdowns" [level=2]
+  - paragraph:
+    - text: Real
+    - code: <select>
+    - text: elements — the browser draws the open list, so there is nothing in the DOM to click.
+  - text: Select Country
+  - combobox "Select Country":
+    - option "Select a country…"
+    - option "United States"
+    - option "Canada"
+    - option "United Kingdom"
+    - option "Germany"
+    - option "France"
+    - option "Australia"
+    - option "Japan"
+    - option "China"
+    - option "Brazil"
+    - option "India" [selected]
+  - text: Sorted Animals
+  - combobox "Sorted Animals":
+    - option "Cat"
+    - option "Cheetah"
+    - option "Deer"
+    - option "Dog" [selected]
+    - option "Elephant"
+    - option "Fox"
+    - option "Giraffe"
+    - option "Lion"
+    - option "Rabbit"
+    - option "Zebra"
+  - paragraph: Verify default dropdown values are in sorted order.
+  - button "Learn More The real <select>, its option values, and why default ordering is worth asserting"
+  - heading "Bootstrap Dropdown" [level=2]
+  - paragraph:
+    - text: Custom dropdown —
+    - strong: not
+    - text: built using the HTML
+    - code: <select>
+    - text: element. It is a
+    - code: div
+    - text: /
+    - code: ul
+    - text: /
+    - code: li
+    - text: structure, so
+    - code: selectOption()
+    - text: cannot touch it.
+  - text: Select Job Title
+  - combobox: QA Engineer
+  - paragraph: "Selected: QA Engineer"
+  - heading "Auto Suggestive Dropdown" [level=2]
+  - textbox "Search for Products": Smart
+  - paragraph: Enter at least 2 characters to see suggestions.
+  - paragraph:
+    - text: "Try typing:"
+    - button "smart"
+    - text: ","
+    - button "lap"
+    - text: ","
+    - button "head"
+    - text: ","
+    - button "cam"
+  - heading "Searchable Custom Dropdown" [level=2]
+  - text: Select Skills
+  - combobox "Select Skills":
+    - textbox "Type to search skills…"
+  - paragraph: "Selected: None"
+  - list:
+    - listitem:
+      - strong: Click
+      - text: the box — the options open straight away.
+    - listitem:
+      - strong: Type
+      - text: to filter the list.
+    - listitem:
+      - strong: ↑ ↓
+      - text: move through the options.
+    - listitem:
+      - strong: Enter
+      - text: opens the list, or selects the highlighted option.
+    - listitem:
+      - strong: Esc
+      - text: closes the list.
+    - listitem:
+      - strong: Backspace
+      - text: removes the last tag — only when the box is empty.
+  - button "Learn More Widgets built from div, button and ul — open it, wait for it, then click"
+  - heading "Dynamic Dependent Dropdown" [level=2]
+  - paragraph:
+    - text: Select a country → State becomes enabled → Select a state → City becomes enabled. Each list is fetched after the one above it changes, so a test waits for
+    - emphasis: enabled and populated
+    - text: ", not just enabled."
+  - text: Country
+  - combobox "Country":
+    - option "Select Country…" [selected]
+    - option "India"
+    - option "USA"
+    - option "UK"
+  - text: State
+  - combobox "State" [disabled]:
+    - option "Select State…" [selected]
+  - text: City
+  - combobox "City" [disabled]:
+    - option "Select City…" [selected]
+  - paragraph: "Selected: —"
+  - 'button "Learn More Country → State → City: waiting for enabled AND populated, and what resets"'
+  - paragraph: Module 3
+  - heading "File Handling" [level=2]
+  - paragraph: Complete file upload, download, and FileChooser automation lab.
+  - heading "Standard File Inputs" [level=3]
+  - paragraph: The element every upload on this page comes down to — first with one file, then with many.
+  - paragraph: Single File Upload
+  - text: Upload Single File
+  - button "Upload Single File"
+  - paragraph: "Selected File: —"
+  - status
+  - button "Reset Single File Upload": Reset
+  - paragraph: "Workflow: Choose File → Upload → Verify Filename"
+  - paragraph: Multiple File Upload
+  - text: Upload Multiple Files
+  - button "Upload Multiple Files"
+  - paragraph: "File Count: 0"
+  - paragraph: "Selected Files: —"
+  - status
+  - button "Reset Multiple File Upload": Reset
+  - paragraph: "Workflow: Choose Files → Upload → Verify All Filenames"
+  - button "Learn More One element, one attribute between them, and what setInputFiles() actually does"
+  - heading "Upload Challenges" [level=3]
+  - paragraph:
+    - text: The same
+    - code: <input type="file">
+    - text: ", reached two different ways. Read the badges: one is direct assignment, the other is an event."
+  - paragraph: Hidden Input Upload Challenge
+  - text: Direct assignment
+  - paragraph: "Question: the input is hidden. How will you upload a resume?"
+  - button "Upload Resume"
+  - button "Reset Hidden Input Upload Challenge": Reset
+  - paragraph: "Accepted Format: PDF only (.pdf)"
+  - paragraph: "Selected: —"
+  - status
+  - paragraph: "Workflow: Inspect Hidden Input → setInputFiles() → Validate Extension → Verify Success/Error Message"
+  - paragraph: FileChooser Event Challenge
+  - text: filechooser event
+  - paragraph: "Question: the file input is dynamically triggered. How will you upload files?"
+  - button "Browse Files"
+  - button "Reset FileChooser Event Challenge": Reset
+  - paragraph: "Accepted: PDF, PNG, JPG, TXT · Maximum: 5 Files"
+  - paragraph: "File Count: 0"
+  - paragraph: "Selected Files: —"
+  - status
+  - paragraph: "Workflow: waitForEvent('filechooser') → click() → setFiles([...]) → Validate File Count → Verify Filenames"
+  - button "Learn More An input that exists but cannot be seen, and a chooser that does not exist until you open it"
+  - heading "Downloads" [level=3]
+  - paragraph: Four real GEN X EVO assets, plus a PDF that can be downloaded or opened in a new tab.
+  - paragraph: Download Manager Challenge
+  - paragraph: genxevo-logo.svg
+  - paragraph: The GEN X EVO brand mark, as vector artwork.
+  - link "Download":
+    - /url: assets/images/GENXEVO/genxevo-mark.svg
+  - paragraph: genxevo-profile-course-guide.pdf
+  - paragraph: Instructor profile and course guide. Two routes on purpose — download it, or open it in a new tab.
+  - link "Download PDF":
+    - /url: assets/downloads/genxevo-profile-course-guide.pdf
+  - link "Open PDF in New Tab":
+    - /url: assets/downloads/genxevo-profile-course-guide.pdf
+  - paragraph: genxevo-course-template-day.csv
+  - paragraph: Course catalogue as CSV — download, modify, re-upload, validate.
+  - link "Download":
+    - /url: assets/downloads/genxevo-course-template-day.csv
+  - paragraph: genxevo-profile-information.txt
+  - paragraph: Plain-text profile summary — easy to assert on line by line.
+  - link "Download":
+    - /url: assets/downloads/genxevo-profile-information.txt
+  - status
+  - paragraph: "Workflow: Download → Save As → Verify File Exists → Cleanup · New tab: Open → Verify URL → Download from the viewer"
+  - button "Learn More The download event, where the file goes, and the PDF that has two routes"
+  - heading "End-to-End Workflow" [level=3]
+  - paragraph: Everything above, in one round trip, in a lab that opens in its own tab.
+  - paragraph: Excel Upload/Download Playground
+  - button "Open Excel Playground"
+  - paragraph: "Workflow: Download → Modify → Upload → Validate → Reset"
+  - button "Learn More Download, modify, re-upload, validate — the round trip, in a card of its own"
+  - paragraph: Module 4
+  - heading "Tables" [level=2]
+  - paragraph: Four progressive exercises — from fundamentals to a full end-to-end automation assignment.
+  - heading "Static Web Table" [level=2]
+  - paragraph: "Practice focus: the markup never changes, so read rows and cells with confidence — then prove Gold + Silver + Bronze really equals Total Medals."
+  - table:
+    - rowgroup:
+      - row "Country Sport Gold Silver Bronze Total Medals":
+        - columnheader "Country"
+        - columnheader "Sport"
+        - columnheader "Gold"
+        - columnheader "Silver"
+        - columnheader "Bronze"
+        - columnheader "Total Medals"
+    - rowgroup:
+      - row "USA Swimming 10 7 5 22":
+        - cell "USA"
+        - cell "Swimming"
+        - cell "10"
+        - cell "7"
+        - cell "5"
+        - cell "22"
+      - row "China Table Tennis 8 3 2 13":
+        - cell "China"
+        - cell "Table Tennis"
+        - cell "8"
+        - cell "3"
+        - cell "2"
+        - cell "13"
+      - row "India Shooting 3 4 2 9":
+        - cell "India"
+        - cell "Shooting"
+        - cell "3"
+        - cell "4"
+        - cell "2"
+        - cell "9"
+      - row "Japan Wrestling 5 2 1 8":
+        - cell "Japan"
+        - cell "Wrestling"
+        - cell "5"
+        - cell "2"
+        - cell "1"
+        - cell "8"
+      - row "Australia Swimming 6 4 3 13":
+        - cell "Australia"
+        - cell "Swimming"
+        - cell "6"
+        - cell "4"
+        - cell "3"
+        - cell "13"
+      - row "United Kingdom Cycling 4 5 2 11":
+        - cell "United Kingdom"
+        - cell "Cycling"
+        - cell "4"
+        - cell "5"
+        - cell "2"
+        - cell "11"
+  - button "Learn More Fixed markup, six rows of medal data, and the locators that reach any cell"
+  - heading "Dynamic Table" [level=2]
+  - paragraph: "Practice focus: Regenerate shuffles both the rows and the column order, so resolve the column from its header text at run time rather than trusting an index."
+  - text: "Manchester City Points: 81"
+  - paragraph: Column order and values regenerate on each click.
+  - button "↻ Regenerate"
+  - table:
+    - rowgroup:
+      - row "Club Wins Points Goals Losses Possession":
+        - columnheader "Club"
+        - columnheader "Wins"
+        - columnheader "Points"
+        - columnheader "Goals"
+        - columnheader "Losses"
+        - columnheader "Possession"
+    - rowgroup:
+      - row "Manchester City 19 81 43 8 57%":
+        - cell "Manchester City"
+        - cell "19"
+        - cell "81"
+        - cell "43"
+        - cell "8"
+        - cell "57%"
+      - row "Real Madrid 9 90 28 1 64%":
+        - cell "Real Madrid"
+        - cell "9"
+        - cell "90"
+        - cell "28"
+        - cell "1"
+        - cell "64%"
+      - row "Barcelona 14 60 43 1 65%":
+        - cell "Barcelona"
+        - cell "14"
+        - cell "60"
+        - cell "43"
+        - cell "1"
+        - cell "65%"
+      - row "Liverpool 22 56 42 3 58%":
+        - cell "Liverpool"
+        - cell "22"
+        - cell "56"
+        - cell "42"
+        - cell "3"
+        - cell "58%"
+      - row "Bayern Munich 8 57 46 8 45%":
+        - cell "Bayern Munich"
+        - cell "8"
+        - cell "57"
+        - cell "46"
+        - cell "8"
+        - cell "45%"
+  - button "Learn More Rows, columns and values rebuilt by script every time the table renders"
+  - heading "Pagination Table" [level=2]
+  - paragraph: "Practice focus: only the current page of records exists in the DOM — search, sort or page your way to a row before you assert anything about it."
+  - text: Search
+  - textbox "Search":
+    - /placeholder: Artist, country, genre…
+  - text: Rows per page
+  - combobox "Rows per page":
+    - option "10" [selected]
+    - option "25"
+    - option "50"
+    - option "All"
+  - table:
+    - rowgroup:
+      - row "Select all on this page Artist ↕ Country ↕ Genre ↕ Grammy Awards ↕ Albums Sold (M) ↕":
+        - columnheader "Select all on this page":
+          - checkbox "Select all on this page"
+        - columnheader "Artist ↕"
+        - columnheader "Country ↕"
+        - columnheader "Genre ↕"
+        - columnheader "Grammy Awards ↕"
+        - columnheader "Albums Sold (M) ↕"
+    - rowgroup:
+      - row "Taylor Swift USA Pop 14 200":
+        - cell:
+          - checkbox
+        - cell "Taylor Swift"
+        - cell "USA"
+        - cell "Pop"
+        - cell "14"
+        - cell "200"
+      - row "Ed Sheeran UK Pop 4 150":
+        - cell:
+          - checkbox
+        - cell "Ed Sheeran"
+        - cell "UK"
+        - cell "Pop"
+        - cell "4"
+        - cell "150"
+      - row "Adele UK Soul 16 120":
+        - cell:
+          - checkbox
+        - cell "Adele"
+        - cell "UK"
+        - cell "Soul"
+        - cell "16"
+        - cell "120"
+      - row "A.R. Rahman India World 2 85":
+        - cell:
+          - checkbox
+        - cell "A.R. Rahman"
+        - cell "India"
+        - cell "World"
+        - cell "2"
+        - cell "85"
+      - row "BTS South Korea K-Pop 0 95":
+        - cell:
+          - checkbox
+        - cell "BTS"
+        - cell "South Korea"
+        - cell "K-Pop"
+        - cell "0"
+        - cell "95"
+      - row "Shakira Colombia Latin Pop 3 75":
+        - cell:
+          - checkbox
+        - cell "Shakira"
+        - cell "Colombia"
+        - cell "Latin Pop"
+        - cell "3"
+        - cell "75"
+      - row "Drake Canada Hip-Hop 4 100":
+        - cell:
+          - checkbox
+        - cell "Drake"
+        - cell "Canada"
+        - cell "Hip-Hop"
+        - cell "4"
+        - cell "100"
+      - row "Coldplay UK Rock 7 100":
+        - cell:
+          - checkbox
+        - cell "Coldplay"
+        - cell "UK"
+        - cell "Rock"
+        - cell "7"
+        - cell "100"
+      - row "Imagine Dragons USA Rock 1 45":
+        - cell:
+          - checkbox
+        - cell "Imagine Dragons"
+        - cell "USA"
+        - cell "Rock"
+        - cell "1"
+        - cell "45"
+      - row "The Weeknd Canada R&B 4 75":
+        - cell:
+          - checkbox
+        - cell "The Weeknd"
+        - cell "Canada"
+        - cell "R&B"
+        - cell "4"
+        - cell "75"
+  - paragraph: Showing 1 to 10 of 62 entries
+  - button "« First" [disabled]
+  - button "‹ Prev" [disabled]
+  - text: Page 1 of 7
+  - button "Next ›"
+  - button "Last »"
+  - button "Learn More Sixty-two records, ten on screen, and every control that changes which ten"
+  - heading "Table Assignment — Flight Booking Portal" [level=2]
+  - paragraph: Step 1 — Choose your route
+  - text: Departure
+  - combobox "Departure":
+    - option "Select departure…" [selected]
+    - option "New York"
+    - option "London"
+    - option "Dubai"
+    - option "Singapore"
+    - option "Mumbai"
+    - option "Sydney"
+  - text: Destination
+  - combobox "Destination":
+    - option "Select destination…" [selected]
+    - option "New York"
+    - option "London"
+    - option "Dubai"
+    - option "Singapore"
+    - option "Mumbai"
+    - option "Sydney"
+  - button "Find Flights"
+  - paragraph: 🛫 Automation Scenario
+  - paragraph: "Objective: Book the cheapest available flight and verify the booking confirmation."
+  - paragraph: Your Automation Tasks
+  - list:
+    - listitem: ✓ Select departure city
+    - listitem: ✓ Select destination city
+    - listitem: ✓ Search available flights
+    - listitem: ✓ Read all available prices
+    - listitem: ✓ Identify the cheapest flight
+    - listitem: ✓ Book that flight
+    - listitem: ✓ Enter passenger information
+    - listitem: ✓ Complete the booking
+    - listitem: ✓ Verify booking confirmation
+  - button "Learn More A results table that does not exist until you search, and a booking that must match the row you picked"
+  - paragraph: Module 5
+  - heading "Dialogs & Interactions" [level=2]
+  - paragraph: Dialogs, mouse gestures, and waiting for elements that appear after a delay.
+  - heading "Alerts & Popups" [level=2]
+  - paragraph:
+    - text: Practice native
+    - code: window.alert()
+    - text: ","
+    - code: confirm()
+    - text: ","
+    - code: prompt()
+    - text: — dialogs that block page execution and cannot be inspected in the DOM.
+  - paragraph: Scenario 1
+  - paragraph: Simple Alert
+  - button "Simple Alert"
+  - paragraph: Scenario 2
+  - paragraph: Confirmation Alert
+  - button "Confirmation Alert"
+  - paragraph: Scenario 3
+  - paragraph: Prompt Alert
+  - button "Prompt Alert"
+  - paragraph: ⚠️ Note
+  - paragraph:
+    - text: Playwright automatically dismisses dialogs if no listener is registered. Always register
+    - code: page.on('dialog')
+    - strong: before
+    - text: the action that triggers the dialog.
+  - 'button "Learn More Native browser dialogs: why no locator reaches them, and what to assert instead"'
+  - heading "🖱️ Mouse Actions" [level=2]
+  - paragraph: Hover, right click, double click, drag and drop, and slider handles — the gestures a mouse-driven test has to reproduce.
+  - paragraph: Hover Dropdown
+  - button "Point Me"
+  - paragraph: "Hint: hover() → wait for menu → interact with child items"
+  - paragraph: Right Click Menu
+  - button "Right Click Me"
+  - paragraph: "Selected: —"
+  - paragraph: "Hint: click({ button: 'right' })"
+  - paragraph: Double Click Copy
+  - text: Field 1 (source)
+  - textbox "Field 1 (source)": Hello Automation!
+  - text: Field 2 (target)
+  - textbox "Field 2 (target)":
+    - /placeholder: Double-click Copy Text →
+  - button "Copy Text"
+  - paragraph: "Hint: dblclick() → validate copied value"
+  - paragraph: Drag & Drop
+  - text: Rome Washington Paris Italy USA France
+  - paragraph: "Matched: 0 / 3"
+  - paragraph: "Hint: dragTo() — or — mouse.down() → move() → up()"
+  - paragraph: Single Value Slider
+  - text: "Current Value: $500"
+  - 'slider "Current Value: $500"': "500"
+  - paragraph: "Hint: move slider handle and validate displayed value"
+  - paragraph: Dual Price Slider
+  - paragraph: "Price Range: $41 - 300"
+  - slider: "41"
+  - slider: "300"
+  - paragraph: "Hint: locate both handles separately and move each handle independently"
+  - button "Learn More Hover, right click, double click, drag and drop, and dragging a slider handle"
+  - heading "⌨️ Keyboard Actions" [level=2]
+  - paragraph: Shortcuts, focus order, modifier keys and clipboard work — driven entirely from the keyboard.
+  - paragraph: Keyboard Mission Lab
+  - paragraph: Practice real keyboard workflows, shortcuts, focus handling, copy/paste scenarios, and sequential user interactions.
+  - paragraph: Step 1 — Department Selector
+  - listbox "Department selector":
+    - option "QA"
+    - option "Automation"
+    - option "DevOps"
+    - option "Data Science"
+  - paragraph: "Selected Department: —"
+  - paragraph: "Workflow: focus() → ArrowDown → Enter → validate selection"
+  - paragraph: Keyboard Mission Progress
+  - list:
+    - listitem: ☐ Department Selected
+    - listitem: ☐ Secret Key Typed
+    - listitem: ☐ Text Copied
+    - listitem: ☐ Summary Generated
+  - paragraph: Step 2 — Secret Key Challenge
+  - paragraph: Type PLAYWRIGHT sequentially, one character at a time.
+  - textbox "Type character by character…"
+  - paragraph: "Progress: 0/10 characters"
+  - paragraph: Waiting for input…
+  - paragraph: "Workflow: pressSequentially() → validate → expect()"
+  - paragraph: Step 3 — Copy/Paste Challenge
+  - text: Source Text
+  - textbox: Automation Testing is Awesome
+  - text: Destination
+  - textbox "Tab here, then Ctrl+V"
+  - paragraph: Waiting for copy…
+  - paragraph: "Workflow: focus() → Ctrl+A → Ctrl+C → Tab → Ctrl+V → expect()"
+  - paragraph: Step 4 — Generate Summary
+  - button "Generate Summary" [disabled]
+  - paragraph: Enabled once Department, Secret Key, and Copy steps are complete.
+  - paragraph: Workflow Result
+  - paragraph: Complete Step 4 to see your results here.
+  - button "Learn More Focus, arrow keys, modifiers and character-by-character typing, across a four-step mission"
+  - heading "📜 Scrolling" [level=2]
+  - paragraph: Scrolling a container versus scrolling the page, and content that only loads once you reach it.
+  - paragraph: Scrolling Challenges
+  - paragraph: Practice scrolling inside containers and infinite lazy loading pages.
+  - paragraph: Scrollable Employee Directory
+  - paragraph: Practice locating hidden items inside a scrollable container.
+  - paragraph: "Target Employee: EMP-125"
+  - text: EMP-001 EMP-002 EMP-003 EMP-004 EMP-005 EMP-006 EMP-007 EMP-008 EMP-009 EMP-010 EMP-011 EMP-012 EMP-013 EMP-014 EMP-015 EMP-016 EMP-017 EMP-018 EMP-019 EMP-020 EMP-021 EMP-022 EMP-023 EMP-024 EMP-025 EMP-026 EMP-027 EMP-028 EMP-029 EMP-030 EMP-031 EMP-032 EMP-033 EMP-034 EMP-035 EMP-036 EMP-037 EMP-038 EMP-039 EMP-040 EMP-041 EMP-042 EMP-043 EMP-044 EMP-045 EMP-046 EMP-047 EMP-048 EMP-049 EMP-050 EMP-051 EMP-052 EMP-053 EMP-054 EMP-055 EMP-056 EMP-057 EMP-058 EMP-059 EMP-060 EMP-061 EMP-062 EMP-063 EMP-064 EMP-065 EMP-066 EMP-067 EMP-068 EMP-069 EMP-070 EMP-071 EMP-072 EMP-073 EMP-074 EMP-075 EMP-076 EMP-077 EMP-078 EMP-079 EMP-080 EMP-081 EMP-082 EMP-083 EMP-084 EMP-085 EMP-086 EMP-087 EMP-088 EMP-089 EMP-090 EMP-091 EMP-092 EMP-093 EMP-094 EMP-095 EMP-096 EMP-097 EMP-098 EMP-099 EMP-100 EMP-101 EMP-102 EMP-103 EMP-104 EMP-105 EMP-106 EMP-107 EMP-108 EMP-109 EMP-110 EMP-111 EMP-112 EMP-113 EMP-114 EMP-115 EMP-116 EMP-117 EMP-118 EMP-119 EMP-120 EMP-121 EMP-122 EMP-123 EMP-124 EMP-125 EMP-126 EMP-127 EMP-128 EMP-129 EMP-130 EMP-131 EMP-132 EMP-133 EMP-134 EMP-135 EMP-136 EMP-137 EMP-138 EMP-139 EMP-140 EMP-141 EMP-142 EMP-143 EMP-144 EMP-145 EMP-146 EMP-147 EMP-148 EMP-149 EMP-150 EMP-151 EMP-152 EMP-153 EMP-154 EMP-155 EMP-156 EMP-157 EMP-158 EMP-159 EMP-160 EMP-161 EMP-162 EMP-163 EMP-164 EMP-165 EMP-166 EMP-167 EMP-168 EMP-169 EMP-170 EMP-171 EMP-172 EMP-173 EMP-174 EMP-175 EMP-176 EMP-177 EMP-178 EMP-179 EMP-180 EMP-181 EMP-182 EMP-183 EMP-184 EMP-185 EMP-186 EMP-187 EMP-188 EMP-189 EMP-190 EMP-191 EMP-192 EMP-193 EMP-194 EMP-195 EMP-196 EMP-197 EMP-198 EMP-199 EMP-200
+  - paragraph: "Selected Employee: None"
+  - paragraph: Infinite Scroll Playground
+  - paragraph: Open a dedicated Book Store Catalog page with continuous lazy loading.
+  - button "Open Infinite Scroll Playground"
+  - paragraph: "Target: Load all books and detect end of catalog."
+  - button "Learn More Scrolling a container versus scrolling the page, and content that only exists once you reach it"
+  - heading "Dynamic Button" [level=2]
+  - paragraph: "Two synchronization scenarios: a delayed element appearance, and a button that mutates its own state."
+  - paragraph: Dynamic Button Appears
+  - paragraph: A brand-new button is injected into the DOM after a 3-second countdown.
+  - button "Start"
+  - paragraph
+  - paragraph
+  - paragraph: Dynamic Button State Change
+  - paragraph: The same button mutates its own text, color, and enabled state — no new elements are created.
+  - button "START"
+  - paragraph
+  - button "Learn More Delayed appearance, changing state, and waiting for something to become actionable"
+  - paragraph: Module 6
+  - heading "Browser Context, Tabs & Windows" [level=2]
+  - paragraph: Real tabs, real popups, real events — practice detecting, switching between, and closing them.
+  - heading "New Tab vs New Window" [level=2]
+  - paragraph: Open Documentation Tab
+  - paragraph: "Practice Note: wait for a new tab to open, then read and close it."
+  - button "Open Playwright Docs"
+  - paragraph:
+    - text: "Tabs Open :"
+    - strong: "0"
+  - paragraph: Open External Window
+  - paragraph: "Practice Note: wait for a popup window, then read and close it."
+  - button "Open Mobilewright Window"
+  - paragraph:
+    - text: "Windows Open :"
+    - strong: "0"
+  - paragraph: Activity Log
+  - paragraph: Live activity feed for both tabs and windows
+  - paragraph: No activity yet.
+  - button "Close Last" [disabled]
+  - button "Close All" [disabled]
+  - button "Clear Log" [disabled]
+  - button "Learn More Opening, counting, reading and closing the pages your application spawns"
+  - heading "Browser Context Handling" [level=2]
+  - paragraph: Practice detecting and switching between multiple tabs and windows.
+  - paragraph: Single Random Tab
+  - paragraph: "Practice Note: verify the opened tab's URL."
+  - button "Open One Random Tab"
+  - paragraph:
+    - text: "Last Opened :"
+    - strong: —
+  - paragraph: Single Random Window
+  - paragraph: "Practice Note: verify the opened window's URL."
+  - button "Open One Random Window"
+  - paragraph:
+    - text: "Last Window :"
+    - strong: —
+  - paragraph: Multiple Tabs at Once
+  - paragraph: "Practice Note: open and verify several tabs at once."
+  - button "Open Three Tabs at Once"
+  - paragraph: Opens Selenium, WebdriverIO and Cypress documentation in separate tabs.
+  - paragraph:
+    - text: "Tabs Opened :"
+    - strong: "0"
+  - paragraph: Multiple Windows at Once
+  - paragraph: "Practice Note: open and verify several windows at once."
+  - button "Open Three Windows at Once"
+  - paragraph: Opens VS Code, Eclipse and PyCharm download pages in separate windows.
+  - paragraph:
+    - text: "Windows Opened :"
+    - strong: "0"
+  - button "Learn More Browser, context and page — and how to survive several pages opening at once"
+  - heading "Parent ↔ Child Communication" [level=2]
+  - paragraph: Practice interacting with a popup window and verifying the result once it closes.
+  - button "Open Login Window"
+  - paragraph:
+    - text: "Status:"
+    - strong: Not Logged In
+  - paragraph: "User: —"
+  - paragraph: Automation Workflow
+  - list:
+    - listitem:
+      - text: "1"
+      - paragraph: Click "Open Login Window"
+    - listitem:
+      - text: "2"
+      - paragraph: Wait until popup opens
+    - listitem:
+      - text: "3"
+      - paragraph: Switch automation focus to popup
+    - listitem:
+      - text: "4"
+      - paragraph: Enter Email
+    - listitem:
+      - text: "5"
+      - paragraph: Enter Password
+    - listitem:
+      - text: "6"
+      - paragraph: Click Login
+    - listitem:
+      - text: "7"
+      - paragraph: Wait for popup to close
+    - listitem:
+      - text: "8"
+      - paragraph: Return to Parent Page
+    - listitem:
+      - text: "9"
+      - paragraph: Verify logged in user
+  - button "Learn More Drive a popup login, then prove the result landed back on the page that opened it"
+  - paragraph: Module 7
+  - heading "Frames & Embedded Content" [level=2]
+  - paragraph: Practice handling iframe elements, nested frames, and frame-switching techniques encountered in enterprise applications.
+  - heading "Frame Counting" [level=2]
+  - paragraph: A live travel dashboard embedding two independent widgets.
+  - paragraph: "Try it: read inside Frame 1, then Frame 2, switching between them and back out to this page."
+  - paragraph:
+    - text: "Iframes on this dashboard:"
+    - strong: "2"
+  - iframe
+  - iframe
+  - button "Learn More What a frame boundary is, how to count frames honestly, and how to read across one"
+  - heading "Payment Gateway Frame" [level=2]
+  - paragraph: A modern checkout form embedded inside an iframe — just like real payment gateways.
+  - text: <iframe id="frame-payment-82" name="payment-gateway-82">
+  - iframe
+  - paragraph: Test Card Information
+  - paragraph: Dataset 1
+  - paragraph: Card Holder
+  - paragraph: JOHN SMITH
+  - paragraph: Card Number
+  - paragraph: 4111 1111 1111 1111
+  - paragraph: Expiry
+  - paragraph: 12/29
+  - paragraph: CVV
+  - paragraph: "123"
+  - paragraph: Status
+  - paragraph: Approved
+  - paragraph: Available Balance
+  - paragraph: ₹1,25,000
+  - paragraph: Dataset 2
+  - paragraph: Card Holder
+  - paragraph: ALEX JOHNSON
+  - paragraph: Card Number
+  - paragraph: 5555 5555 5555 4444
+  - paragraph: Expiry
+  - paragraph: 08/28
+  - paragraph: CVV
+  - paragraph: "456"
+  - paragraph: Status
+  - paragraph: Insufficient Balance
+  - paragraph: Available Balance
+  - paragraph: ₹120
+  - paragraph: Payment Result
+  - paragraph: "Payment Status: —"
+  - paragraph: "Balance: —"
+  - paragraph: "Result: Fill the form and click Pay Now"
+  - paragraph: 💡 Most payment gateways use iframes to isolate sensitive card data.
+  - button "Learn More A checkout form inside an iframe, its input masks, its validation and the result it posts out"
+  - heading "Advanced Frame Handling" [level=2]
+  - paragraph: Practice nested frames, child frames, dynamic iframes, and frame discovery techniques.
+  - paragraph: Nested Frames
+  - paragraph: An enquiry form whose Travel Preference section lives inside its own nested iframe.
+  - text: <iframe id="frame-feedback" name="feedback-portal">
+  - iframe
+  - paragraph: Students Should Automate
+  - paragraph: Parent Frame → Child Frame → Back to Parent → Submit → Validate success message
+  - paragraph: Dynamic Frame
+  - paragraph: Iframes can appear, reload, or change at runtime.
+  - button "Load Complaint Form"
+  - paragraph: Students Should Automate
+  - list:
+    - listitem: ✓ Dynamic iframe
+    - listitem: ✓ Fill mandatory fields
+    - listitem: ✓ Dropdown selection
+    - listitem: ✓ Submit
+    - listitem: ✓ Success validation
+  - button "Learn More A frame inside a frame, and a frame that does not exist until you ask for it"
+  - paragraph: Module 8
+  - heading "Calendars & Date Pickers" [level=2]
+  - paragraph: Six progressive exercises — from native HTML inputs with real business rules to dual calendars and enterprise date fields.
+  - heading "Native HTML5 Date Input" [level=2]
+  - paragraph: Date of birth must be at least 18 years ago. Passport expiry must be after the issued date and within 10 years of it. Type an invalid value — the page validates, it does not stop you.
+  - text: Date of Birth
+  - textbox "Date of Birth"
+  - paragraph: "Selected: —"
+  - text: Passport Issued Date
+  - textbox "Passport Issued Date"
+  - paragraph: "Selected: —"
+  - text: Passport Expiry Date
+  - textbox "Passport Expiry Date"
+  - paragraph: "Selected: —"
+  - status: Enter an issued date and an expiry date.
+  - status: idle
+  - button "Learn More Three fields, three business rules, and the messages you assert against"
+  - heading "jQuery UI Datepicker" [level=2]
+  - textbox "Click to pick a date…"
+  - paragraph: "Selected Date: —"
+  - heading "Dropdown-Based Datepicker" [level=2]
+  - combobox:
+    - option "January"
+    - option "February"
+    - option "March"
+    - option "April"
+    - option "May"
+    - option "June" [selected]
+    - option "July"
+    - option "August"
+    - option "September"
+    - option "October"
+    - option "November"
+    - option "December"
+  - combobox:
+    - option "1950"
+    - option "1951"
+    - option "1952"
+    - option "1953"
+    - option "1954"
+    - option "1955"
+    - option "1956"
+    - option "1957"
+    - option "1958"
+    - option "1959"
+    - option "1960"
+    - option "1961"
+    - option "1962"
+    - option "1963"
+    - option "1964"
+    - option "1965"
+    - option "1966"
+    - option "1967"
+    - option "1968"
+    - option "1969"
+    - option "1970"
+    - option "1971"
+    - option "1972"
+    - option "1973"
+    - option "1974"
+    - option "1975"
+    - option "1976"
+    - option "1977"
+    - option "1978"
+    - option "1979"
+    - option "1980"
+    - option "1981"
+    - option "1982"
+    - option "1983"
+    - option "1984"
+    - option "1985"
+    - option "1986"
+    - option "1987"
+    - option "1988"
+    - option "1989"
+    - option "1990"
+    - option "1991"
+    - option "1992"
+    - option "1993"
+    - option "1994"
+    - option "1995"
+    - option "1996"
+    - option "1997"
+    - option "1998"
+    - option "1999"
+    - option "2000"
+    - option "2001"
+    - option "2002"
+    - option "2003"
+    - option "2004"
+    - option "2005"
+    - option "2006"
+    - option "2007"
+    - option "2008"
+    - option "2009"
+    - option "2010"
+    - option "2011"
+    - option "2012"
+    - option "2013"
+    - option "2014"
+    - option "2015"
+    - option "2016"
+    - option "2017"
+    - option "2018"
+    - option "2019"
+    - option "2020"
+    - option "2021"
+    - option "2022"
+    - option "2023"
+    - option "2024"
+    - option "2025"
+    - option "2026" [selected]
+    - option "2027"
+    - option "2028"
+    - option "2029"
+    - option "2030"
+    - option "2031"
+    - option "2032"
+    - option "2033"
+    - option "2034"
+    - option "2035"
+    - option "2036"
+  - grid:
+    - rowgroup:
+      - row "Su Mo Tu We Th Fr Sa":
+        - columnheader "Su"
+        - columnheader "Mo"
+        - columnheader "Tu"
+        - columnheader "We"
+        - columnheader "Th"
+        - columnheader "Fr"
+        - columnheader "Sa"
+    - rowgroup:
+      - row "1 2 3 4 5 6":
+        - gridcell
+        - gridcell "1"
+        - gridcell "2"
+        - gridcell "3"
+        - gridcell "4"
+        - gridcell "5"
+        - gridcell "6"
+      - row "7 8 9 10 11 12 13":
+        - gridcell "7"
+        - gridcell "8"
+        - gridcell "9"
+        - gridcell "10"
+        - gridcell "11"
+        - gridcell "12"
+        - gridcell "13"
+      - row "14 15 16 17 18 19 20":
+        - gridcell "14"
+        - gridcell "15"
+        - gridcell "16"
+        - gridcell "17"
+        - gridcell "18"
+        - gridcell "19"
+        - gridcell "20"
+      - row "21 22 23 24 25 26 27":
+        - gridcell "21"
+        - gridcell "22"
+        - gridcell "23"
+        - gridcell "24"
+        - gridcell "25"
+        - gridcell "26"
+        - gridcell "27"
+      - row "28 29 30":
+        - gridcell "28"
+        - gridcell "29"
+        - gridcell "30"
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+  - paragraph: "Selected Date: —"
+  - button "Learn More Readonly fields, month navigation, and jumping straight to a year"
+  - heading "Multi-Calendar" [level=2]
+  - button "‹"
+  - text: Nov 2026 – Jan 2027
+  - button "›"
+  - paragraph: November 2026
+  - grid:
+    - rowgroup:
+      - row "Su Mo Tu We Th Fr Sa":
+        - columnheader "Su"
+        - columnheader "Mo"
+        - columnheader "Tu"
+        - columnheader "We"
+        - columnheader "Th"
+        - columnheader "Fr"
+        - columnheader "Sa"
+    - rowgroup:
+      - row "1 2 3 4 5 6 7":
+        - gridcell "1"
+        - gridcell "2"
+        - gridcell "3"
+        - gridcell "4"
+        - gridcell "5"
+        - gridcell "6"
+        - gridcell "7"
+      - row "8 9 10 11 12 13 14":
+        - gridcell "8"
+        - gridcell "9"
+        - gridcell "10"
+        - gridcell "11"
+        - gridcell "12"
+        - gridcell "13"
+        - gridcell "14"
+      - row "15 16 17 18 19 20 21":
+        - gridcell "15"
+        - gridcell "16"
+        - gridcell "17"
+        - gridcell "18"
+        - gridcell "19"
+        - gridcell "20"
+        - gridcell "21"
+      - row "22 23 24 25 26 27 28":
+        - gridcell "22"
+        - gridcell "23"
+        - gridcell "24"
+        - gridcell "25"
+        - gridcell "26"
+        - gridcell "27"
+        - gridcell "28"
+      - row "29 30":
+        - gridcell "29"
+        - gridcell "30"
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+  - paragraph: December 2026
+  - grid:
+    - rowgroup:
+      - row "Su Mo Tu We Th Fr Sa":
+        - columnheader "Su"
+        - columnheader "Mo"
+        - columnheader "Tu"
+        - columnheader "We"
+        - columnheader "Th"
+        - columnheader "Fr"
+        - columnheader "Sa"
+    - rowgroup:
+      - row "1 2 3 4 5":
+        - gridcell
+        - gridcell
+        - gridcell "1"
+        - gridcell "2"
+        - gridcell "3"
+        - gridcell "4"
+        - gridcell "5"
+      - row "6 7 8 9 10 11 12":
+        - gridcell "6"
+        - gridcell "7"
+        - gridcell "8"
+        - gridcell "9"
+        - gridcell "10"
+        - gridcell "11"
+        - gridcell "12"
+      - row "13 14 15 16 17 18 19":
+        - gridcell "13"
+        - gridcell "14"
+        - gridcell "15"
+        - gridcell "16"
+        - gridcell "17"
+        - gridcell "18"
+        - gridcell "19"
+      - row "20 21 22 23 24 25 26":
+        - gridcell "20"
+        - gridcell "21"
+        - gridcell "22"
+        - gridcell "23"
+        - gridcell "24"
+        - gridcell "25"
+        - gridcell "26"
+      - row "27 28 29 30 31":
+        - gridcell "27"
+        - gridcell "28"
+        - gridcell "29"
+        - gridcell "30"
+        - gridcell "31"
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+  - paragraph: January 2027
+  - grid:
+    - rowgroup:
+      - row "Su Mo Tu We Th Fr Sa":
+        - columnheader "Su"
+        - columnheader "Mo"
+        - columnheader "Tu"
+        - columnheader "We"
+        - columnheader "Th"
+        - columnheader "Fr"
+        - columnheader "Sa"
+    - rowgroup:
+      - row "1 2":
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell "1"
+        - gridcell "2"
+      - row "3 4 5 6 7 8 9":
+        - gridcell "3"
+        - gridcell "4"
+        - gridcell "5"
+        - gridcell "6"
+        - gridcell "7"
+        - gridcell "8"
+        - gridcell "9"
+      - row "10 11 12 13 14 15 16":
+        - gridcell "10"
+        - gridcell "11"
+        - gridcell "12"
+        - gridcell "13"
+        - gridcell "14"
+        - gridcell "15"
+        - gridcell "16"
+      - row "17 18 19 20 21 22 23":
+        - gridcell "17"
+        - gridcell "18"
+        - gridcell "19"
+        - gridcell "20"
+        - gridcell "21"
+        - gridcell "22"
+        - gridcell "23"
+      - row "24 25 26 27 28 29 30":
+        - gridcell "24"
+        - gridcell "25"
+        - gridcell "26"
+        - gridcell "27"
+        - gridcell "28"
+        - gridcell "29"
+        - gridcell "30"
+      - row "31":
+        - gridcell "31"
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+  - paragraph: "Selected Journey: Click any date to begin"
+  - button "Clear selection"
+  - button "Learn More Three panels, one repeated day number, and how to name the right cell"
+  - heading "Dual Calendar" [level=2]
+  - paragraph: Past dates are not selectable. Minimum stay 2 nights . Maximum booking 30 days . A rejected check-out is not applied — assert the message.
+  - status: Select a check-in date to begin.
+  - button "Select check-in and check-out dates": Check-in Add date — Check-out Add date
+  - button "Learn More Two panels behind one field, and the three rules that refuse a bad stay"
+  - heading "Enterprise Date Inputs" [level=2]
+  - paragraph: Readonly Date Field
+  - paragraph: This field simulates an existing date already stored in an enterprise application. Users cannot type directly because the field is readonly.
+  - text: Customer Date of Birth
+  - textbox "Customer Date of Birth": 11/04/2026
+  - paragraph: 🔒 Existing value retrieved from the system. Automation engineers typically interact with the calendar popup — in some legacy applications, the readonly attribute may be removed using JavaScript for automation purposes.
+  - paragraph: Hybrid Date Field (Type or Calendar Selection)
+  - paragraph:
+    - text: Type a date directly
+    - emphasis: or
+    - text: click the 📅 icon to open a calendar popup — both inputs update the same field. Typed values must be
+    - code: mm/dd/yyyy
+    - text: and a real calendar date.
+  - textbox "mm/dd/yyyy"
+  - button "Open calendar": 📅
+  - paragraph: "Value: —"
+  - button "Learn More Readonly values you did not set, and one field with two ways in"
+  - paragraph: Module 9
+  - heading "Advanced UI Elements" [level=2]
+  - paragraph: Practice automating complex visual components frequently used in enterprise dashboards and modern web applications.
+  - heading "Interactive SVG Bar Chart" [level=2]
+  - paragraph: A monthly sales dashboard. Hover a bar for details, click a bar to select it.
+  - img "Bar chart of monthly sales from January to May": 120 200 150 80 170 Jan Feb Mar Apr May
+  - paragraph: Hover a bar to see its value
+  - paragraph: "Selected: none"
+  - paragraph: Automation Objectives
+  - list:
+    - listitem: ✓ Count bars
+    - listitem: ✓ Find highest value
+    - listitem: ✓ Find lowest value
+    - listitem: ✓ Click highest bar
+    - listitem: ✓ Verify tooltip
+    - listitem: ✓ Validate updated values
+  - text: SVG Rect SVG Text Hover Dynamic Attributes Click
+  - heading "Interactive SVG Pie Chart" [level=2]
+  - paragraph: Traffic sources by channel. Hover a slice to expand it, click to select.
+  - img "Pie chart of traffic sources"
+  - list:
+    - listitem: Organic Search — 35%
+    - listitem: Direct — 25%
+    - listitem: Social Media — 20%
+    - listitem: Referral — 20%
+  - paragraph: Hover a slice to see details
+  - paragraph: "Selected Slice: none"
+  - paragraph: Automation Objectives
+  - list:
+    - listitem: ✓ Hover slice
+    - listitem: ✓ Click slice
+    - listitem: ✓ Verify category
+    - listitem: ✓ Validate percentage
+    - listitem: ✓ Verify tooltip
+  - text: SVG Path Transform Fill Stroke Hover
+  - 'button "Learn More A bar chart and a pie chart: shapes that carry their own data, and how to read it"'
+  - heading "Interactive Seat Booking Map" [level=2]
+  - paragraph: A theatre-style seat map. Click an available seat to select it, click again to release it.
+  - img "Seat booking map": A1 A2 A3 A4 A5 B1 B2 B3 B4 B5 C1 C2 C3 C4 C5
+  - text: Available Occupied Selected
+  - paragraph: "Available: 12 · Occupied: 3"
+  - paragraph: "Selected Seats: none"
+  - paragraph: Automation Objectives
+  - list:
+    - listitem: ✓ Count available
+    - listitem: ✓ Count occupied
+    - listitem: ✓ Select seat
+    - listitem: ✓ Verify color change
+    - listitem: ✓ Validate summary
+  - text: SVG Rect Dynamic Classes Fill Stroke Coordinate Selection
+  - heading "Interactive SVG World Map" [level=2]
+  - paragraph: A simplified world map. Hover a region for its name, click to select it.
+  - img "Simplified interactive world map": USA BRA UK AFR IND CHN AUS
+  - paragraph: Hover a region to see its name
+  - paragraph: "Selected Country: none"
+  - paragraph: Automation Objectives
+  - list:
+    - listitem: ✓ Hover country
+    - listitem: ✓ Click country
+    - listitem: ✓ Verify tooltip
+    - listitem: ✓ Verify selected country
+    - listitem: ✓ Validate highlighted region
+  - text: SVG Path Hover Dynamic Fill Complex Selectors
+  - 'button "Learn More A seat map and a world map: clicking shapes, and the state each one holds"'
+  - paragraph: Module 10
+  - heading "Labs & Real-World Automation" [level=2]
+  - paragraph: Explore complete automation labs covering authentication, security, browser internals, network behaviour, real-world applications, and advanced automation scenarios.
+  - paragraph: Each card opens a standalone application or lab in a new tab. This page stays open behind it.
+  - paragraph: Authentication State Lab
+  - paragraph: Capture a signed-in storage state once and reuse it across tests.
+  - link "Open Lab":
+    - /url: /authentication-state-lab.html
+  - paragraph: Automation Challenge Arena
+  - paragraph: Game-based automation challenges, including Memory Matrix and SVG Spell Bee.
+  - link "Open Arena":
+    - /url: /arena.html
+  - paragraph: CAPTCHA Lab
+  - paragraph: Work through challenge-token flows and understand where automation legitimately stops.
+  - link "Open Lab":
+    - /url: /captcha-lab.html
+  - paragraph: Commerce
+  - paragraph: A complete storefront-to-checkout journey backed by a real API and real order data.
+  - link "Open App":
+    - /url: /shop.html
+  - paragraph: Cookies Lab
+  - paragraph: Read, set, and assert on cookies; persist and restore storage state.
+  - link "Open Lab":
+    - /url: /cookies-lab.html
+  - paragraph: Honeypot Lab
+  - paragraph: Detect and avoid hidden trap fields designed to catch bots.
+  - link "Open Lab":
+    - /url: /honeypot-lab.html
+  - paragraph: HTTP Status Lab
+  - paragraph: Drive and assert on the full range of HTTP status codes and retry behaviour.
+  - link "Open Lab":
+    - /url: /http-status-lab.html
+  - paragraph: Locators Lab
+  - paragraph: Confidently select any element with the right strategy.
+  - link "Open Lab":
+    - /url: /locators-lab.html
+  - paragraph: Network Lab
+  - paragraph: Intercept, mock, and route requests; assert on payloads and headers.
+  - link "Open Lab":
+    - /url: /network-lab.html
+  - paragraph: OTP Lab
+  - paragraph: Automate time-based one-time-password flows deterministically.
+  - link "Open Lab":
+    - /url: /otp-lab.html
+  - paragraph: Proxy & SSL Lab
+  - paragraph: Route traffic through proxies and reason about certificates and TLS.
+  - link "Open Lab":
+    - /url: /proxy-ssl-lab.html
+  - paragraph: Shadow DOM Lab
+  - paragraph: Automate web components and pierce shadow roots reliably.
+  - link "Open Lab":
+    - /url: /shadow-dom-lab.html
+  - paragraph: CineVerse
+  - paragraph: A full cinema-booking application — browse films, pick seats, and complete a booking.
+  - link "Open App":
+    - /url: /cineverse/index.html
+  - paragraph: OAuth Platform
+  - paragraph: A standards-based OAuth2 / OIDC authorization server with its own isolated identity system.
+  - link "Open App":
+    - /url: /oauth/
+- contentinfo:
+  - text: Products
+  - link "Commerce":
+    - /url: /shop.html
+  - link "OAuth Platform":
+    - /url: /oauth/
+  - link "CineVerse":
+    - /url: /cineverse/index.html
+  - link "Automation Arena":
+    - /url: /arena.html
+  - text: Practice & Labs
+  - link "Practice Playground":
+    - /url: /practice.html
+  - link "Locators":
+    - /url: /locators-lab.html
+  - link "Shadow DOM":
+    - /url: /shadow-dom-lab.html
+  - link "Network":
+    - /url: /network-lab.html
+  - link "All Labs":
+    - /url: /practice.html#section-browser-internals
+  - text: API
+  - link "Authentication":
+    - /url: /authentication-state-lab.html
+  - link "HTTP Status":
+    - /url: /http-status-lab.html
+  - link "OTP & TOTP":
+    - /url: /otp-lab.html
+  - text: Resources
+  - link "Courses":
+    - /url: /courses.html
+  - link "Blogs":
+    - /url: /blogs.html
+  - link "Interview Hub":
+    - /url: /interview-hub.html
+  - text: Community
+  - link "Community Hub":
+    - /url: /community.html
+  - text: Discord · soon Project
+  - link "About":
+    - /url: /about.html
+  - link "Contact":
+    - /url: /contact.html
+  - link "Privacy Policy":
+    - /url: /privacy.html
+  - link "Terms & Conditions":
+    - /url: /terms.html
+  - text: GitHub · soon
+  - separator
+  - text: Real applications. Real APIs. Real auth. Built to be automated. © Playwright Automation Platform · Built by Rajeshkumar Muthu · v1.0
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Dropdowns', async ({ page }) => {
+  4  |   await page.goto(
+  5  |     'https://www.playwrightautomation.com/practice.html#section-dropdowns'
+  6  |   );
+  7  | 
+  8  |   // Native select dropdowns
+  9  |   await page.locator('#country').selectOption({ label: 'India' });
+  10 |   await page.getByTestId('dropdown-sorted').selectOption({ label: 'Dog' });
+  11 | 
+  12 |   // Custom Bootstrap dropdown
+  13 |   await page.locator('.bd-select-trigger').click();
+  14 |   await page.getByText('QA Engineer', { exact: true }).click();
+  15 |   await expect(
+  16 |     page.getByText('Selected: QA Engineer', { exact: true })
+  17 |   ).toBeVisible();
+  18 | 
+  19 |   // Product autocomplete
+  20 |   await page.getByPlaceholder('Search for Products').fill('Smart');
+  21 |   const suggestions = page.locator('li.as-item');
+> 22 |   await expect(suggestions.first()).toBeVisible();
+     |                                     ^ Error: expect(locator).toBeVisible() failed
+  23 |   console.log('Suggestions:', await suggestions.count());
+  24 | 
+  25 |   // Searchable custom dropdown: type, then choose a suggestion
+  26 |   const skillsSearch = page.getByPlaceholder('Type to search skills…');
+  27 |   await skillsSearch.fill('Playwright');
+  28 |   await page.getByText('Playwright TypeScript', { exact: true }).click();
+  29 | 
+  30 |   // Dependent native dropdowns
+  31 |   const state = page.getByTestId('dep-dropdown-state');
+  32 |   const city = page.getByTestId('dep-dropdown-city');
+  33 | 
+  34 |   await page.getByTestId('dep-dropdown-country').selectOption({ label: 'India' });
+  35 |   await expect(state).toBeEnabled();
+  36 |   await state.selectOption({ label: 'Tamil Nadu' });
+  37 | 
+  38 |   await expect(city).toBeEnabled();
+  39 |   await city.selectOption({ label: 'Chennai' });
+  40 | 
+  41 |   await expect(
+  42 |     page.getByText('Selected: India → Tamil Nadu → Chennai', { exact: true })
+  43 |   ).toBeVisible();
+  44 | });
+```

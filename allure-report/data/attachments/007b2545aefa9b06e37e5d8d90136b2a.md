@@ -1,0 +1,2359 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Alerts_Popups.spec.js >> Handle alerts and prompts
+- Location: tests\Alerts_Popups.spec.js:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to "https://www.playwrightautomation.com/practice.html#section-alerts", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "GEN X EVO ACADEMY — home" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e7]: Practice Playground
+      - navigation "Primary" [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Practice" [ref=e10] [cursor=pointer]:
+          - /url: /practice.html
+        - button "Products" [ref=e12] [cursor=pointer]
+        - button "API" [ref=e15] [cursor=pointer]
+        - button "Advanced" [ref=e18] [cursor=pointer]
+        - link "Courses" [ref=e20] [cursor=pointer]:
+          - /url: /courses.html
+        - link "Blogs" [ref=e21] [cursor=pointer]:
+          - /url: /blogs.html
+        - link "Interview Hub" [ref=e22] [cursor=pointer]:
+          - /url: /interview-hub.html
+        - link "About" [ref=e23] [cursor=pointer]:
+          - /url: /about.html
+        - link "Contact" [ref=e24] [cursor=pointer]:
+          - /url: /contact.html
+      - generic [ref=e25]:
+        - button "Toggle theme" [ref=e26] [cursor=pointer]
+        - link "Login" [ref=e29] [cursor=pointer]:
+          - /url: /login.html?redirect=%2Fpractice.html%23section-alerts
+  - complementary "Mobile navigation" [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: Menu
+        - button "Close" [ref=e34] [cursor=pointer]
+      - link "Home" [ref=e36] [cursor=pointer]:
+        - /url: /
+      - link "Practice" [ref=e37] [cursor=pointer]:
+        - /url: /practice.html
+      - generic [ref=e38]:
+        - generic [ref=e39]: Products
+        - link "Commerce" [ref=e40] [cursor=pointer]:
+          - /url: /shop.html
+        - link "OAuth Platform" [ref=e41] [cursor=pointer]:
+          - /url: /oauth/
+        - link "CineVerse" [ref=e42] [cursor=pointer]:
+          - /url: /cineverse/index.html
+        - link "Automation Arena" [ref=e43] [cursor=pointer]:
+          - /url: /arena.html
+      - generic [ref=e44]:
+        - generic [ref=e45]: API
+        - link "Authentication" [ref=e46] [cursor=pointer]:
+          - /url: /authentication-state-lab.html
+        - link "HTTP Status" [ref=e47] [cursor=pointer]:
+          - /url: /http-status-lab.html
+        - link "OTP & TOTP" [ref=e48] [cursor=pointer]:
+          - /url: /otp-lab.html
+      - generic [ref=e49]:
+        - generic [ref=e50]: Advanced
+        - link "Locators" [ref=e51] [cursor=pointer]:
+          - /url: /locators-lab.html
+        - link "Shadow DOM" [ref=e52] [cursor=pointer]:
+          - /url: /shadow-dom-lab.html
+        - link "Infinite Scroll" [ref=e53] [cursor=pointer]:
+          - /url: /infinite-scroll.html
+        - link "Upload & Download" [ref=e54] [cursor=pointer]:
+          - /url: /excel-upload-download-lab.html
+        - link "Cookies" [ref=e55] [cursor=pointer]:
+          - /url: /cookies-lab.html
+        - link "Network" [ref=e56] [cursor=pointer]:
+          - /url: /network-lab.html
+        - link "Captcha" [ref=e57] [cursor=pointer]:
+          - /url: /captcha-lab.html
+        - link "Honeypot" [ref=e58] [cursor=pointer]:
+          - /url: /honeypot-lab.html
+        - link "Proxy & SSL" [ref=e59] [cursor=pointer]:
+          - /url: /proxy-ssl-lab.html
+      - link "Courses" [ref=e60] [cursor=pointer]:
+        - /url: /courses.html
+      - link "Blogs" [ref=e61] [cursor=pointer]:
+        - /url: /blogs.html
+      - link "Interview Hub" [ref=e62] [cursor=pointer]:
+        - /url: /interview-hub.html
+      - link "About" [ref=e63] [cursor=pointer]:
+        - /url: /about.html
+      - link "Contact" [ref=e64] [cursor=pointer]:
+        - /url: /contact.html
+      - link "Login" [ref=e66] [cursor=pointer]:
+        - /url: /login.html?redirect=%2Fpractice.html%23section-alerts
+  - navigation "Breadcrumb" [ref=e68]:
+    - link "Home" [ref=e69] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e70]: /
+    - link "Practice Platform" [ref=e71] [cursor=pointer]:
+      - /url: /catalog-practice.html
+    - generic [ref=e72]: /
+    - generic [ref=e73]: Practice Playground
+  - generic [ref=e74]:
+    - complementary "Practice Playground sections" [ref=e75]:
+      - paragraph [ref=e76]: Modules
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - button "01 Form Controls" [expanded] [ref=e79] [cursor=pointer]:
+            - generic [ref=e80]: "01"
+            - generic [ref=e81]: Form Controls
+          - list [ref=e82]:
+            - listitem [ref=e83]:
+              - link "Text Inputs" [ref=e84] [cursor=pointer]:
+                - /url: "#section-text-inputs"
+            - listitem [ref=e85]:
+              - link "Radio Buttons" [ref=e86] [cursor=pointer]:
+                - /url: "#section-radios"
+            - listitem [ref=e87]:
+              - link "Checkboxes" [ref=e88] [cursor=pointer]:
+                - /url: "#section-checkboxes"
+            - listitem [ref=e89]:
+              - link "Multi Selects" [ref=e90] [cursor=pointer]:
+                - /url: "#section-multiselects"
+            - listitem [ref=e91]:
+              - link "Toggle Switches" [ref=e92] [cursor=pointer]:
+                - /url: "#section-toggles"
+            - listitem [ref=e93]:
+              - link "Tooltip" [ref=e94] [cursor=pointer]:
+                - /url: "#section-tooltip"
+            - listitem [ref=e95]:
+              - link "Show / Hide Elements" [ref=e96] [cursor=pointer]:
+                - /url: "#section-showhide"
+            - listitem [ref=e97]:
+              - link "Hidden Elements & AJAX" [ref=e98] [cursor=pointer]:
+                - /url: "#section-hidden-ajax"
+        - button "02 Dropdowns" [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: "02"
+          - generic [ref=e102]: Dropdowns
+        - button "03 File Handling" [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]: "03"
+          - generic [ref=e106]: File Handling
+        - button "04 Tables" [ref=e108] [cursor=pointer]:
+          - generic [ref=e109]: "04"
+          - generic [ref=e110]: Tables
+        - button "05 Dialogs & Interactions" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: "05"
+          - generic [ref=e114]: Dialogs & Interactions
+        - button "06 Browser Context, Tabs & Windows" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: "06"
+          - generic [ref=e118]: Browser Context, Tabs & Windows
+        - button "07 Frames & Embedded Content" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121]: "07"
+          - generic [ref=e122]: Frames & Embedded Content
+        - button "08 Calendars & Date Pickers" [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]: "08"
+          - generic [ref=e126]: Calendars & Date Pickers
+        - button "09 Advanced UI Elements" [ref=e128] [cursor=pointer]:
+          - generic [ref=e129]: "09"
+          - generic [ref=e130]: Advanced UI Elements
+        - button "10 Labs & Real-World Automation" [ref=e132] [cursor=pointer]:
+          - generic [ref=e133]: "10"
+          - generic [ref=e134]: Labs & Real-World Automation
+    - main [ref=e135]:
+      - generic [ref=e136]:
+        - paragraph [ref=e137]: Module 1
+        - heading "Form Controls" [level=2] [ref=e138]
+        - paragraph [ref=e139]: Eight focused lessons on the controls every form-based test touches — from text inputs through to elements that appear only after an asynchronous call.
+      - generic [ref=e140]:
+        - generic [ref=e142]:
+          - heading "Text Inputs" [level=2] [ref=e143]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - generic [ref=e147]: Name
+                - textbox "Name" [ref=e148]:
+                  - /placeholder: Enter your name
+              - generic [ref=e149]:
+                - generic [ref=e150]: Email
+                - textbox "Email" [ref=e151]:
+                  - /placeholder: Enter your email
+            - generic [ref=e152]:
+              - generic [ref=e153]: Address
+              - textbox "Address" [ref=e154]:
+                - /placeholder: Enter your address
+            - generic [ref=e155]:
+              - button "Submit" [ref=e156] [cursor=pointer]
+              - button "Reset" [ref=e157] [cursor=pointer]
+              - status
+        - generic [ref=e159]:
+          - heading "Radio Buttons" [level=2] [ref=e160]
+          - group "Gender" [ref=e161]:
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - radio "Male" [ref=e165]
+                - text: Male
+              - generic [ref=e166]:
+                - radio "Female" [ref=e167]
+                - text: Female
+              - generic [ref=e168]:
+                - radio "Non-binary / Prefer not to say" [ref=e169]
+                - text: Non-binary / Prefer not to say
+      - button "Learn More Labels, validation, radio groups and the locators that survive a redesign" [ref=e172] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e173]: ▸
+        - generic [ref=e174]: Learn More
+        - generic [ref=e175]: Labels, validation, radio groups and the locators that survive a redesign
+      - generic [ref=e176]:
+        - generic [ref=e178]:
+          - heading "Checkboxes" [level=2] [ref=e179]
+          - group "Available days" [ref=e180]:
+            - generic [ref=e182]:
+              - checkbox "Select all days" [ref=e183]
+              - text: Select All
+            - generic [ref=e184]:
+              - generic [ref=e185]:
+                - checkbox "Sunday" [ref=e186]
+                - text: Sunday
+              - generic [ref=e187]:
+                - checkbox "Monday" [ref=e188]
+                - text: Monday
+              - generic [ref=e189]:
+                - checkbox "Tuesday" [ref=e190]
+                - text: Tuesday
+              - generic [ref=e191]:
+                - checkbox "Wednesday" [ref=e192]
+                - text: Wednesday
+              - generic [ref=e193]:
+                - checkbox "Thursday" [ref=e194]
+                - text: Thursday
+              - generic [ref=e195]:
+                - checkbox "Friday" [ref=e196]
+                - text: Friday
+              - generic [ref=e197]:
+                - checkbox "Saturday" [ref=e198]
+                - text: Saturday
+        - generic [ref=e200]:
+          - heading "Toggle Switches" [level=2] [ref=e201]
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - paragraph [ref=e205]: Enable Notifications
+                - paragraph [ref=e206]: Get notified about test runs and results.
+              - checkbox "Enable Notifications" [ref=e208] [cursor=pointer]
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - paragraph [ref=e212]: Email Alerts
+                - paragraph [ref=e213]: Receive a daily summary by email.
+              - checkbox "Email Alerts" [checked] [ref=e215] [cursor=pointer]
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - paragraph [ref=e219]: Auto Save
+                - paragraph [ref=e220]: Automatically save your progress as you go.
+              - checkbox "Auto Save" [ref=e222] [cursor=pointer]
+      - button "Learn More Group selection, the indeterminate state, and why a toggle is still a checkbox" [ref=e226] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e227]: ▸
+        - generic [ref=e228]: Learn More
+        - generic [ref=e229]: Group selection, the indeterminate state, and why a toggle is still a checkbox
+      - generic [ref=e230]:
+        - generic [ref=e232]:
+          - heading "Multi Selects" [level=2] [ref=e233]
+          - generic [ref=e234]:
+            - generic [ref=e235]: Clothing brands
+            - listbox "Clothing brands" [ref=e236]:
+              - option "Nike" [ref=e237]
+              - option "Adidas" [ref=e238]
+              - option "Puma" [ref=e239]
+              - option "Zara" [ref=e240]
+              - option "Puma" [ref=e241]
+              - option "Zara" [ref=e242]
+              - option "Levi's" [ref=e243]
+              - option "H&M" [ref=e244]
+              - option "Uniqlo" [ref=e245]
+            - paragraph [ref=e246]: "Tip: Hold Ctrl/Cmd to select multiple. Puma and Zara appear twice — same label, different value."
+        - generic [ref=e248]:
+          - heading "Tooltip" [level=2] [ref=e249]
+          - paragraph [ref=e250]: The tooltip is only in the DOM while the trigger is hovered or focused — so a test has to hover first, then assert.
+          - generic [ref=e251]:
+            - button "Delivery estimate" [ref=e253] [cursor=pointer]
+            - paragraph [ref=e254]: Hover the button (or focus it with Tab).
+          - paragraph [ref=e255]: "Tooltip state: hidden"
+      - button "Learn More Duplicate option text, strict mode, and elements that only exist while hovered" [ref=e258] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e259]: ▸
+        - generic [ref=e260]: Learn More
+        - generic [ref=e261]: Duplicate option text, strict mode, and elements that only exist while hovered
+      - generic [ref=e262]:
+        - generic [ref=e264]:
+          - heading "Show / Hide Elements" [level=2] [ref=e265]
+          - paragraph [ref=e266]:
+            - text: The target starts
+            - strong [ref=e267]: visible
+            - text: .
+            - emphasis [ref=e268]: Hide
+            - text: applies the
+            - code [ref=e269]: hidden
+            - text: attribute, so the field genuinely leaves the accessibility tree — not just the screen. Every click is acknowledged in the log below, including a click that changes nothing.
+          - generic [ref=e270]:
+            - button "Hide Element" [ref=e271] [cursor=pointer]
+            - button "Show Element" [ref=e272] [cursor=pointer]
+          - generic [ref=e273]: Target field
+          - textbox "Target field" [ref=e274]:
+            - /placeholder: I disappear when you click Hide
+          - paragraph [ref=e275]: "Target state: visible"
+          - status [ref=e276]: No clicks yet.
+        - generic [ref=e278]:
+          - heading "Hidden Elements & AJAX" [level=2] [ref=e279]
+          - paragraph [ref=e280]: Two controls start hidden, and the content block only exists after an asynchronous round trip finishes.
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - generic [ref=e283]: Input Box 1
+              - textbox "Input Box 1" [ref=e284]
+            - generic [ref=e286]:
+              - checkbox "Checkbox 1" [ref=e287]
+              - text: Checkbox 1
+          - generic [ref=e288]:
+            - button "Toggle Input Box 2" [ref=e289] [cursor=pointer]
+            - button "Toggle Checkbox 2" [ref=e290] [cursor=pointer]
+            - button "Load AJAX Content" [ref=e291] [cursor=pointer]
+          - paragraph [ref=e292]:
+            - text: "Status:"
+            - status [ref=e293]: Ready
+          - generic [ref=e294]: No content loaded yet.
+      - button "Learn More Hidden versus absent, attached versus visible, and waiting without a fixed timeout" [ref=e297] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e298]: ▸
+        - generic [ref=e299]: Learn More
+        - generic [ref=e300]: Hidden versus absent, attached versus visible, and waiting without a fixed timeout
+      - generic [ref=e301]:
+        - paragraph [ref=e302]: Module 2
+        - heading "Dropdowns" [level=2] [ref=e303]
+        - paragraph [ref=e304]: Native selects and the four custom dropdown patterns you meet most often in real applications.
+      - generic [ref=e306]:
+        - heading "Static Dropdowns" [level=2] [ref=e307]
+        - paragraph [ref=e308]:
+          - text: Real
+          - code [ref=e309]: <select>
+          - text: elements — the browser draws the open list, so there is nothing in the DOM to click.
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - generic [ref=e312]: Select Country
+            - combobox "Select Country" [ref=e313]:
+              - option "Select a country…" [selected]
+              - option "United States"
+              - option "Canada"
+              - option "United Kingdom"
+              - option "Germany"
+              - option "France"
+              - option "Australia"
+              - option "Japan"
+              - option "China"
+              - option "Brazil"
+              - option "India"
+          - generic [ref=e314]:
+            - generic [ref=e315]: Sorted Animals
+            - combobox "Sorted Animals" [ref=e316]:
+              - option "Cat" [selected]
+              - option "Cheetah"
+              - option "Deer"
+              - option "Dog"
+              - option "Elephant"
+              - option "Fox"
+              - option "Giraffe"
+              - option "Lion"
+              - option "Rabbit"
+              - option "Zebra"
+            - paragraph [ref=e317]: Verify default dropdown values are in sorted order.
+      - button "Learn More The real <select>, its option values, and why default ordering is worth asserting" [ref=e320] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e321]: ▸
+        - generic [ref=e322]: Learn More
+        - generic [ref=e323]: The real <select>, its option values, and why default ordering is worth asserting
+      - generic [ref=e324]:
+        - generic [ref=e326]:
+          - heading "Bootstrap Dropdown" [level=2] [ref=e327]
+          - paragraph [ref=e328]:
+            - text: Custom dropdown —
+            - strong [ref=e329]: not
+            - text: built using the HTML
+            - code [ref=e330]: <select>
+            - text: element. It is a
+            - code [ref=e331]: div
+            - text: /
+            - code [ref=e332]: ul
+            - text: /
+            - code [ref=e333]: li
+            - text: structure, so
+            - code [ref=e334]: selectOption()
+            - text: cannot touch it.
+          - generic [ref=e335]:
+            - generic [ref=e336]: Select Job Title
+            - generic "Select Job Title" [ref=e337]:
+              - combobox [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: "-- Select --"
+            - paragraph [ref=e343]: "Selected: —"
+        - generic [ref=e345]:
+          - heading "Auto Suggestive Dropdown" [level=2] [ref=e346]
+          - textbox "Search for Products" [ref=e348]
+          - paragraph [ref=e349]: Enter at least 2 characters to see suggestions.
+          - paragraph [ref=e350]:
+            - text: "Try typing:"
+            - button "smart" [ref=e351] [cursor=pointer]
+            - text: ","
+            - button "lap" [ref=e352] [cursor=pointer]
+            - text: ","
+            - button "head" [ref=e353] [cursor=pointer]
+            - text: ","
+            - button "cam" [ref=e354] [cursor=pointer]
+        - generic [ref=e356]:
+          - heading "Searchable Custom Dropdown" [level=2] [ref=e357]
+          - generic [ref=e358]:
+            - generic [ref=e359]: Select Skills
+            - combobox "Select Skills" [ref=e361]:
+              - textbox "Type to search skills…" [ref=e362]
+            - paragraph [ref=e363]: "Selected: None"
+            - list [ref=e364]:
+              - listitem [ref=e365]:
+                - strong [ref=e366]: Click
+                - text: the box — the options open straight away.
+              - listitem [ref=e367]:
+                - strong [ref=e368]: Type
+                - text: to filter the list.
+              - listitem [ref=e369]:
+                - strong [ref=e370]: ↑ ↓
+                - text: move through the options.
+              - listitem [ref=e371]:
+                - strong [ref=e372]: Enter
+                - text: opens the list, or selects the highlighted option.
+              - listitem [ref=e373]:
+                - strong [ref=e374]: Esc
+                - text: closes the list.
+              - listitem [ref=e375]:
+                - strong [ref=e376]: Backspace
+                - text: removes the last tag — only when the box is empty.
+      - button "Learn More Widgets built from div, button and ul — open it, wait for it, then click" [ref=e379] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e380]: ▸
+        - generic [ref=e381]: Learn More
+        - generic [ref=e382]: Widgets built from div, button and ul — open it, wait for it, then click
+      - generic [ref=e384]:
+        - heading "Dynamic Dependent Dropdown" [level=2] [ref=e385]
+        - paragraph [ref=e386]:
+          - text: Select a country → State becomes enabled → Select a state → City becomes enabled. Each list is fetched after the one above it changes, so a test waits for
+          - emphasis [ref=e387]: enabled and populated
+          - text: ", not just enabled."
+        - generic [ref=e388]:
+          - generic [ref=e389]:
+            - generic [ref=e390]: Country
+            - combobox "Country" [ref=e391]:
+              - option "Select Country…" [selected]
+              - option "India"
+              - option "USA"
+              - option "UK"
+          - generic [ref=e392]:
+            - generic [ref=e393]: State
+            - combobox "State" [disabled] [ref=e394]:
+              - option "Select State…" [selected]
+          - generic [ref=e395]:
+            - generic [ref=e396]: City
+            - combobox "City" [disabled] [ref=e397]:
+              - option "Select City…" [selected]
+        - paragraph [ref=e398]: "Selected: —"
+      - 'button "Learn More Country → State → City: waiting for enabled AND populated, and what resets" [ref=e401] [cursor=pointer]':
+        - generic [aria-hidden] [ref=e402]: ▸
+        - generic [ref=e403]: Learn More
+        - generic [ref=e404]: "Country → State → City: waiting for enabled AND populated, and what resets"
+      - generic [ref=e405]:
+        - paragraph [ref=e406]: Module 3
+        - heading "File Handling" [level=2] [ref=e407]
+        - paragraph [ref=e408]: Complete file upload, download, and FileChooser automation lab.
+      - generic [ref=e409]:
+        - generic [ref=e410]:
+          - heading "Standard File Inputs" [level=3] [ref=e412]
+          - paragraph [ref=e413]: The element every upload on this page comes down to — first with one file, then with many.
+          - generic [ref=e414]:
+            - generic [ref=e415]:
+              - paragraph [ref=e416]: Single File Upload
+              - generic [ref=e417]: Upload Single File
+              - button "Upload Single File" [ref=e418]
+              - paragraph [ref=e419]: "Selected File: —"
+              - status [ref=e420]
+              - button "Reset Single File Upload" [ref=e422] [cursor=pointer]: Reset
+              - paragraph [ref=e423]: "Workflow: Choose File → Upload → Verify Filename"
+            - generic [ref=e424]:
+              - paragraph [ref=e425]: Multiple File Upload
+              - generic [ref=e426]: Upload Multiple Files
+              - button "Upload Multiple Files" [ref=e427]
+              - paragraph [ref=e428]: "File Count: 0"
+              - paragraph [ref=e429]: "Selected Files: —"
+              - status [ref=e430]
+              - button "Reset Multiple File Upload" [ref=e432] [cursor=pointer]: Reset
+              - paragraph [ref=e433]: "Workflow: Choose Files → Upload → Verify All Filenames"
+        - button "Learn More One element, one attribute between them, and what setInputFiles() actually does" [ref=e436] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e437]: ▸
+          - generic [ref=e438]: Learn More
+          - generic [ref=e439]: One element, one attribute between them, and what setInputFiles() actually does
+        - generic [ref=e440]:
+          - heading "Upload Challenges" [level=3] [ref=e442]
+          - paragraph [ref=e443]:
+            - text: The same
+            - code [ref=e444]: <input type="file">
+            - text: ", reached two different ways. Read the badges: one is direct assignment, the other is an event."
+          - generic [ref=e445]:
+            - generic [ref=e446]:
+              - generic [ref=e447]:
+                - paragraph [ref=e448]: Hidden Input Upload Challenge
+                - generic [ref=e449]: Direct assignment
+              - paragraph [ref=e450]: "Question: the input is hidden. How will you upload a resume?"
+              - generic [ref=e451]:
+                - button "Upload Resume" [ref=e452] [cursor=pointer]
+                - button "Reset Hidden Input Upload Challenge" [ref=e453] [cursor=pointer]: Reset
+              - paragraph [ref=e454]: "Accepted Format: PDF only (.pdf)"
+              - paragraph [ref=e455]: "Selected: —"
+              - status [ref=e456]
+              - paragraph [ref=e457]: "Workflow: Inspect Hidden Input → setInputFiles() → Validate Extension → Verify Success/Error Message"
+            - generic [ref=e458]:
+              - generic [ref=e459]:
+                - paragraph [ref=e460]: FileChooser Event Challenge
+                - generic [ref=e461]: filechooser event
+              - paragraph [ref=e462]: "Question: the file input is dynamically triggered. How will you upload files?"
+              - generic [ref=e463]:
+                - button "Browse Files" [ref=e464] [cursor=pointer]
+                - button "Reset FileChooser Event Challenge" [ref=e465] [cursor=pointer]: Reset
+              - paragraph [ref=e466]: "Accepted: PDF, PNG, JPG, TXT · Maximum: 5 Files"
+              - paragraph [ref=e467]: "File Count: 0"
+              - paragraph [ref=e468]: "Selected Files: —"
+              - status [ref=e469]
+              - paragraph [ref=e470]: "Workflow: waitForEvent('filechooser') → click() → setFiles([...]) → Validate File Count → Verify Filenames"
+        - button "Learn More An input that exists but cannot be seen, and a chooser that does not exist until you open it" [ref=e473] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e474]: ▸
+          - generic [ref=e475]: Learn More
+          - generic [ref=e476]: An input that exists but cannot be seen, and a chooser that does not exist until you open it
+        - generic [ref=e477]:
+          - heading "Downloads" [level=3] [ref=e479]
+          - paragraph [ref=e480]: Four real GEN X EVO assets, plus a PDF that can be downloaded or opened in a new tab.
+          - generic [ref=e482]:
+            - paragraph [ref=e483]: Download Manager Challenge
+            - generic [ref=e484]:
+              - generic [ref=e485]:
+                - paragraph [ref=e486]: genxevo-logo.svg
+                - paragraph [ref=e487]: The GEN X EVO brand mark, as vector artwork.
+                - link "Download" [ref=e489] [cursor=pointer]:
+                  - /url: assets/images/GENXEVO/genxevo-mark.svg
+              - generic [ref=e490]:
+                - paragraph [ref=e491]: genxevo-profile-course-guide.pdf
+                - paragraph [ref=e492]: Instructor profile and course guide. Two routes on purpose — download it, or open it in a new tab.
+                - generic [ref=e493]:
+                  - link "Download PDF" [ref=e494] [cursor=pointer]:
+                    - /url: assets/downloads/genxevo-profile-course-guide.pdf
+                  - link "Open PDF in New Tab" [ref=e495] [cursor=pointer]:
+                    - /url: assets/downloads/genxevo-profile-course-guide.pdf
+              - generic [ref=e496]:
+                - paragraph [ref=e497]: genxevo-course-template-day.csv
+                - paragraph [ref=e498]: Course catalogue as CSV — download, modify, re-upload, validate.
+                - link "Download" [ref=e500] [cursor=pointer]:
+                  - /url: assets/downloads/genxevo-course-template-day.csv
+              - generic [ref=e501]:
+                - paragraph [ref=e502]: genxevo-profile-information.txt
+                - paragraph [ref=e503]: Plain-text profile summary — easy to assert on line by line.
+                - link "Download" [ref=e505] [cursor=pointer]:
+                  - /url: assets/downloads/genxevo-profile-information.txt
+            - status [ref=e506]
+            - paragraph [ref=e507]: "Workflow: Download → Save As → Verify File Exists → Cleanup · New tab: Open → Verify URL → Download from the viewer"
+        - button "Learn More The download event, where the file goes, and the PDF that has two routes" [ref=e510] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e511]: ▸
+          - generic [ref=e512]: Learn More
+          - generic [ref=e513]: The download event, where the file goes, and the PDF that has two routes
+        - generic [ref=e514]:
+          - heading "End-to-End Workflow" [level=3] [ref=e516]
+          - paragraph [ref=e517]: Everything above, in one round trip, in a lab that opens in its own tab.
+          - generic [ref=e519]:
+            - paragraph [ref=e520]: Excel Upload/Download Playground
+            - button "Open Excel Playground" [ref=e521] [cursor=pointer]
+            - paragraph [ref=e522]: "Workflow: Download → Modify → Upload → Validate → Reset"
+      - button "Learn More Download, modify, re-upload, validate — the round trip, in a card of its own" [ref=e525] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e526]: ▸
+        - generic [ref=e527]: Learn More
+        - generic [ref=e528]: Download, modify, re-upload, validate — the round trip, in a card of its own
+      - generic [ref=e529]:
+        - paragraph [ref=e530]: Module 4
+        - heading "Tables" [level=2] [ref=e531]
+        - paragraph [ref=e532]: Four progressive exercises — from fundamentals to a full end-to-end automation assignment.
+      - generic [ref=e534]:
+        - heading "Static Web Table" [level=2] [ref=e536]
+        - paragraph [ref=e537]: "Practice focus: the markup never changes, so read rows and cells with confidence — then prove Gold + Silver + Bronze really equals Total Medals."
+        - table [ref=e540]:
+          - rowgroup [ref=e541]:
+            - row [ref=e542]:
+              - columnheader "Country" [ref=e543]
+              - columnheader "Sport" [ref=e544]
+              - columnheader "Gold" [ref=e545]
+              - columnheader "Silver" [ref=e546]
+              - columnheader "Bronze" [ref=e547]
+              - columnheader "Total Medals" [ref=e548]
+          - rowgroup [ref=e549]:
+            - row [ref=e550]:
+              - cell "USA" [ref=e551]
+              - cell "Swimming" [ref=e552]
+              - cell "10" [ref=e553]
+              - cell "7" [ref=e554]
+              - cell "5" [ref=e555]
+              - cell "22" [ref=e556]
+            - row [ref=e557]:
+              - cell "China" [ref=e558]
+              - cell "Table Tennis" [ref=e559]
+              - cell "8" [ref=e560]
+              - cell "3" [ref=e561]
+              - cell "2" [ref=e562]
+              - cell "13" [ref=e563]
+            - row [ref=e564]:
+              - cell "India" [ref=e565]
+              - cell "Shooting" [ref=e566]
+              - cell "3" [ref=e567]
+              - cell "4" [ref=e568]
+              - cell "2" [ref=e569]
+              - cell "9" [ref=e570]
+            - row [ref=e571]:
+              - cell "Japan" [ref=e572]
+              - cell "Wrestling" [ref=e573]
+              - cell "5" [ref=e574]
+              - cell "2" [ref=e575]
+              - cell "1" [ref=e576]
+              - cell "8" [ref=e577]
+            - row [ref=e578]:
+              - cell "Australia" [ref=e579]
+              - cell "Swimming" [ref=e580]
+              - cell "6" [ref=e581]
+              - cell "4" [ref=e582]
+              - cell "3" [ref=e583]
+              - cell "13" [ref=e584]
+            - row [ref=e585]:
+              - cell "United Kingdom" [ref=e586]
+              - cell "Cycling" [ref=e587]
+              - cell "4" [ref=e588]
+              - cell "5" [ref=e589]
+              - cell "2" [ref=e590]
+              - cell "11" [ref=e591]
+      - generic [ref=e594]:
+        - heading "Dynamic Table" [level=2] [ref=e596]
+        - paragraph [ref=e597]: "Practice focus: Regenerate shuffles both the rows and the column order, so resolve the column from its header text at run time rather than trusting an index."
+        - generic [ref=e598]:
+          - generic [ref=e599]:
+            - generic [ref=e600]: "Manchester City Points:"
+            - generic [ref=e601]: "82"
+          - generic [ref=e602]:
+            - paragraph [ref=e603]: Column order and values regenerate on each click.
+            - button "↻ Regenerate" [ref=e604] [cursor=pointer]
+          - table [ref=e606]:
+            - rowgroup [ref=e607]:
+              - row [ref=e608]:
+                - columnheader "Wins" [ref=e609]
+                - columnheader "Losses" [ref=e610]
+                - columnheader "Points" [ref=e611]
+                - columnheader "Possession" [ref=e612]
+                - columnheader "Goals" [ref=e613]
+                - columnheader "Club" [ref=e614]
+            - rowgroup [ref=e615]:
+              - row [ref=e616]:
+                - cell "20" [ref=e617]
+                - cell "4" [ref=e618]
+                - cell "82" [ref=e619]
+                - cell "63%" [ref=e620]
+                - cell "26" [ref=e621]
+                - cell "Liverpool" [ref=e622]
+              - row [ref=e623]:
+                - cell "22" [ref=e624]
+                - cell "4" [ref=e625]
+                - cell "88" [ref=e626]
+                - cell "63%" [ref=e627]
+                - cell "26" [ref=e628]
+                - cell "Real Madrid" [ref=e629]
+              - row [ref=e630]:
+                - cell "8" [ref=e631]
+                - cell "7" [ref=e632]
+                - cell "82" [ref=e633]
+                - cell "54%" [ref=e634]
+                - cell "29" [ref=e635]
+                - cell "Bayern Munich" [ref=e636]
+              - row [ref=e637]:
+                - cell "15" [ref=e638]
+                - cell "6" [ref=e639]
+                - cell "73" [ref=e640]
+                - cell "67%" [ref=e641]
+                - cell "37" [ref=e642]
+                - cell "Barcelona" [ref=e643]
+              - row [ref=e644]:
+                - cell "11" [ref=e645]
+                - cell "8" [ref=e646]
+                - cell "82" [ref=e647]
+                - cell "52%" [ref=e648]
+                - cell "25" [ref=e649]
+                - cell "Manchester City" [ref=e650]
+      - generic [ref=e653]:
+        - heading "Pagination Table" [level=2] [ref=e655]
+        - paragraph [ref=e656]: "Practice focus: only the current page of records exists in the DOM — search, sort or page your way to a row before you assert anything about it."
+        - generic [ref=e657]:
+          - generic [ref=e658]:
+            - generic [ref=e659]:
+              - generic [ref=e660]: Search
+              - textbox "Search" [ref=e661]:
+                - /placeholder: Artist, country, genre…
+            - generic [ref=e662]:
+              - generic [ref=e663]: Rows per page
+              - combobox "Rows per page" [ref=e664]:
+                - option "10" [selected]
+                - option "25"
+                - option "50"
+                - option "All"
+          - table [ref=e666]:
+            - rowgroup [ref=e667]:
+              - row [ref=e668]:
+                - columnheader [ref=e669]:
+                  - checkbox "Select all on this page" [ref=e670] [cursor=pointer]
+                - columnheader "Artist ↕" [ref=e671] [cursor=pointer]
+                - columnheader "Country ↕" [ref=e672] [cursor=pointer]
+                - columnheader "Genre ↕" [ref=e673] [cursor=pointer]
+                - columnheader "Grammy Awards ↕" [ref=e674] [cursor=pointer]
+                - columnheader "Albums Sold (M) ↕" [ref=e675] [cursor=pointer]
+            - rowgroup [ref=e676]:
+              - row [ref=e677]:
+                - cell [ref=e678]:
+                  - checkbox [ref=e679] [cursor=pointer]
+                - cell "Taylor Swift" [ref=e680]
+                - cell "USA" [ref=e681]
+                - cell "Pop" [ref=e682]
+                - cell "14" [ref=e684]
+                - cell "200" [ref=e685]
+              - row [ref=e686]:
+                - cell [ref=e687]:
+                  - checkbox [ref=e688] [cursor=pointer]
+                - cell "Ed Sheeran" [ref=e689]
+                - cell "UK" [ref=e690]
+                - cell "Pop" [ref=e691]
+                - cell "4" [ref=e693]
+                - cell "150" [ref=e694]
+              - row [ref=e695]:
+                - cell [ref=e696]:
+                  - checkbox [ref=e697] [cursor=pointer]
+                - cell "Adele" [ref=e698]
+                - cell "UK" [ref=e699]
+                - cell "Soul" [ref=e700]
+                - cell "16" [ref=e702]
+                - cell "120" [ref=e703]
+              - row [ref=e704]:
+                - cell [ref=e705]:
+                  - checkbox [ref=e706] [cursor=pointer]
+                - cell "A.R. Rahman" [ref=e707]
+                - cell "India" [ref=e708]
+                - cell "World" [ref=e709]
+                - cell "2" [ref=e711]
+                - cell "85" [ref=e712]
+              - row [ref=e713]:
+                - cell [ref=e714]:
+                  - checkbox [ref=e715] [cursor=pointer]
+                - cell "BTS" [ref=e716]
+                - cell "South Korea" [ref=e717]
+                - cell "K-Pop" [ref=e718]
+                - cell "0" [ref=e720]
+                - cell "95" [ref=e721]
+              - row [ref=e722]:
+                - cell [ref=e723]:
+                  - checkbox [ref=e724] [cursor=pointer]
+                - cell "Shakira" [ref=e725]
+                - cell "Colombia" [ref=e726]
+                - cell "Latin Pop" [ref=e727]
+                - cell "3" [ref=e729]
+                - cell "75" [ref=e730]
+              - row [ref=e731]:
+                - cell [ref=e732]:
+                  - checkbox [ref=e733] [cursor=pointer]
+                - cell "Drake" [ref=e734]
+                - cell "Canada" [ref=e735]
+                - cell "Hip-Hop" [ref=e736]
+                - cell "4" [ref=e738]
+                - cell "100" [ref=e739]
+              - row [ref=e740]:
+                - cell [ref=e741]:
+                  - checkbox [ref=e742] [cursor=pointer]
+                - cell "Coldplay" [ref=e743]
+                - cell "UK" [ref=e744]
+                - cell "Rock" [ref=e745]
+                - cell "7" [ref=e747]
+                - cell "100" [ref=e748]
+              - row [ref=e749]:
+                - cell [ref=e750]:
+                  - checkbox [ref=e751] [cursor=pointer]
+                - cell "Imagine Dragons" [ref=e752]
+                - cell "USA" [ref=e753]
+                - cell "Rock" [ref=e754]
+                - cell "1" [ref=e756]
+                - cell "45" [ref=e757]
+              - row [ref=e758]:
+                - cell [ref=e759]:
+                  - checkbox [ref=e760] [cursor=pointer]
+                - cell "The Weeknd" [ref=e761]
+                - cell "Canada" [ref=e762]
+                - cell "R&B" [ref=e763]
+                - cell "4" [ref=e765]
+                - cell "75" [ref=e766]
+          - generic [ref=e767]:
+            - paragraph [ref=e768]: Showing 1 to 10 of 62 entries
+            - generic [ref=e769]:
+              - button "« First" [disabled] [ref=e770]
+              - button "‹ Prev" [disabled] [ref=e771]
+              - generic [ref=e772]: Page 1 of 7
+              - button "Next ›" [ref=e773] [cursor=pointer]
+              - button "Last »" [ref=e774] [cursor=pointer]
+      - generic [ref=e777]:
+        - heading "Table Assignment — Flight Booking Portal" [level=2] [ref=e779]
+        - generic [ref=e780]:
+          - generic [ref=e782]:
+            - paragraph [ref=e783]: Step 1 — Choose your route
+            - generic [ref=e784]:
+              - generic [ref=e785]:
+                - generic [ref=e786]: Departure
+                - combobox "Departure" [ref=e787]:
+                  - option "Select departure…" [selected]
+                  - option "New York"
+                  - option "London"
+                  - option "Dubai"
+                  - option "Singapore"
+                  - option "Mumbai"
+                  - option "Sydney"
+              - generic [ref=e788]:
+                - generic [ref=e789]: Destination
+                - combobox "Destination" [ref=e790]:
+                  - option "Select destination…" [selected]
+                  - option "New York"
+                  - option "London"
+                  - option "Dubai"
+                  - option "Singapore"
+                  - option "Mumbai"
+                  - option "Sydney"
+              - button "Find Flights" [ref=e791] [cursor=pointer]
+          - generic [ref=e793]:
+            - paragraph [ref=e794]: 🛫 Automation Scenario
+            - paragraph [ref=e795]: "Objective: Book the cheapest available flight and verify the booking confirmation."
+            - paragraph [ref=e796]: Your Automation Tasks
+            - list [ref=e797]:
+              - listitem [ref=e798]:
+                - generic [ref=e799]: ✓
+                - text: Select departure city
+              - listitem [ref=e800]:
+                - generic [ref=e801]: ✓
+                - text: Select destination city
+              - listitem [ref=e802]:
+                - generic [ref=e803]: ✓
+                - text: Search available flights
+              - listitem [ref=e804]:
+                - generic [ref=e805]: ✓
+                - text: Read all available prices
+              - listitem [ref=e806]:
+                - generic [ref=e807]: ✓
+                - text: Identify the cheapest flight
+              - listitem [ref=e808]:
+                - generic [ref=e809]: ✓
+                - text: Book that flight
+              - listitem [ref=e810]:
+                - generic [ref=e811]: ✓
+                - text: Enter passenger information
+              - listitem [ref=e812]:
+                - generic [ref=e813]: ✓
+                - text: Complete the booking
+              - listitem [ref=e814]:
+                - generic [ref=e815]: ✓
+                - text: Verify booking confirmation
+      - generic [ref=e817]:
+        - paragraph [ref=e818]: Module 5
+        - heading "Dialogs & Interactions" [level=2] [ref=e819]
+        - paragraph [ref=e820]: Dialogs, mouse gestures, and waiting for elements that appear after a delay.
+      - generic [ref=e822]:
+        - heading "Alerts & Popups" [level=2] [ref=e824]
+        - paragraph [ref=e825]:
+          - text: Practice native
+          - code [ref=e826]: window.alert()
+          - text: ","
+          - code [ref=e827]: confirm()
+          - text: ","
+          - code [ref=e828]: prompt()
+          - text: — dialogs that block page execution and cannot be inspected in the DOM.
+        - generic [ref=e829]:
+          - generic [ref=e830]:
+            - generic [ref=e831]:
+              - paragraph [ref=e832]: Scenario 1
+              - paragraph [ref=e833]: Simple Alert
+            - button "Simple Alert" [ref=e834] [cursor=pointer]
+          - generic [ref=e835]:
+            - generic [ref=e836]:
+              - paragraph [ref=e837]: Scenario 2
+              - paragraph [ref=e838]: Confirmation Alert
+            - button "Confirmation Alert" [ref=e839] [cursor=pointer]
+          - generic [ref=e840]:
+            - generic [ref=e841]:
+              - paragraph [ref=e842]: Scenario 3
+              - paragraph [ref=e843]: Prompt Alert
+            - button "Prompt Alert" [ref=e844] [cursor=pointer]
+        - generic [ref=e845]:
+          - paragraph [ref=e846]: ⚠️ Note
+          - paragraph [ref=e847]:
+            - text: Playwright automatically dismisses dialogs if no listener is registered. Always register
+            - code [ref=e848]: page.on('dialog')
+            - strong [ref=e849]: before
+            - text: the action that triggers the dialog.
+      - generic [ref=e852]:
+        - heading "🖱️ Mouse Actions" [level=2] [ref=e854]
+        - paragraph [ref=e855]: Hover, right click, double click, drag and drop, and slider handles — the gestures a mouse-driven test has to reproduce.
+        - generic [ref=e856]:
+          - generic [ref=e857]:
+            - paragraph [ref=e858]: Hover Dropdown
+            - button "Point Me" [ref=e860] [cursor=pointer]
+            - paragraph [ref=e861]: "Hint: hover() → wait for menu → interact with child items"
+          - generic [ref=e862]:
+            - paragraph [ref=e863]: Right Click Menu
+            - button "Right Click Me" [ref=e865] [cursor=pointer]
+            - paragraph [ref=e866]: "Selected: —"
+            - paragraph [ref=e867]: "Hint: click({ button: 'right' })"
+          - generic [ref=e868]:
+            - paragraph [ref=e869]: Double Click Copy
+            - generic [ref=e870]:
+              - generic [ref=e871]:
+                - generic [ref=e872]: Field 1 (source)
+                - textbox "Field 1 (source)" [ref=e873]: Hello Automation!
+              - generic [ref=e874]:
+                - generic [ref=e875]: Field 2 (target)
+                - textbox "Field 2 (target)" [ref=e876]:
+                  - /placeholder: Double-click Copy Text →
+              - button "Copy Text" [ref=e877] [cursor=pointer]
+            - paragraph [ref=e878]: "Hint: dblclick() → validate copied value"
+          - generic [ref=e879]:
+            - paragraph [ref=e880]: Drag & Drop
+            - generic [ref=e881]:
+              - generic [ref=e882]:
+                - generic [ref=e883]: Rome
+                - generic [ref=e884]: Washington
+                - generic [ref=e885]: Paris
+              - generic [ref=e886]:
+                - generic [ref=e887]: Italy
+                - generic [ref=e888]: USA
+                - generic [ref=e889]: France
+            - paragraph [ref=e890]: "Matched: 0 / 3"
+            - paragraph [ref=e891]: "Hint: dragTo() — or — mouse.down() → move() → up()"
+          - generic [ref=e892]:
+            - paragraph [ref=e893]: Single Value Slider
+            - generic [ref=e894]: "Current Value: $500"
+            - 'slider "Current Value: $500" [ref=e895]': "500"
+            - paragraph [ref=e896]: "Hint: move slider handle and validate displayed value"
+          - generic [ref=e897]:
+            - paragraph [ref=e898]: Dual Price Slider
+            - paragraph [ref=e899]: "Price Range: $41 - 300"
+            - generic [ref=e900]:
+              - slider: "41"
+              - slider: "300"
+            - paragraph [ref=e902]: "Hint: locate both handles separately and move each handle independently"
+      - generic [ref=e905]:
+        - heading "⌨️ Keyboard Actions" [level=2] [ref=e906]
+        - paragraph [ref=e907]: Shortcuts, focus order, modifier keys and clipboard work — driven entirely from the keyboard.
+        - generic [ref=e909]:
+          - paragraph [ref=e911]: Keyboard Mission Lab
+          - paragraph [ref=e912]: Practice real keyboard workflows, shortcuts, focus handling, copy/paste scenarios, and sequential user interactions.
+          - generic [ref=e913]:
+            - generic [ref=e914]:
+              - paragraph [ref=e915]: Step 1 — Department Selector
+              - listbox "Department selector" [ref=e916]:
+                - option "QA" [ref=e917]
+                - option "Automation" [ref=e918]
+                - option "DevOps" [ref=e919]
+                - option "Data Science" [ref=e920]
+              - paragraph [ref=e921]: "Selected Department: —"
+              - paragraph [ref=e922]: "Workflow: focus() → ArrowDown → Enter → validate selection"
+            - generic [ref=e923]:
+              - paragraph [ref=e924]: Keyboard Mission Progress
+              - list [ref=e925]:
+                - listitem [ref=e926]:
+                  - generic [ref=e927]: ☐
+                  - text: Department Selected
+                - listitem [ref=e928]:
+                  - generic [ref=e929]: ☐
+                  - text: Secret Key Typed
+                - listitem [ref=e930]:
+                  - generic [ref=e931]: ☐
+                  - text: Text Copied
+                - listitem [ref=e932]:
+                  - generic [ref=e933]: ☐
+                  - text: Summary Generated
+            - generic [ref=e934]:
+              - paragraph [ref=e935]: Step 2 — Secret Key Challenge
+              - paragraph [ref=e936]: Type PLAYWRIGHT sequentially, one character at a time.
+              - textbox "Type character by character…" [ref=e937]
+              - paragraph [ref=e938]: "Progress: 0/10 characters"
+              - paragraph [ref=e939]: Waiting for input…
+              - paragraph [ref=e940]: "Workflow: pressSequentially() → validate → expect()"
+            - generic [ref=e941]:
+              - paragraph [ref=e942]: Step 3 — Copy/Paste Challenge
+              - generic [ref=e943]:
+                - generic [ref=e944]:
+                  - generic [ref=e945]: Source Text
+                  - textbox [ref=e946]: Automation Testing is Awesome
+                - generic [ref=e947]:
+                  - generic [ref=e948]: Destination
+                  - textbox "Tab here, then Ctrl+V" [ref=e949]
+              - paragraph [ref=e950]: Waiting for copy…
+              - paragraph [ref=e951]: "Workflow: focus() → Ctrl+A → Ctrl+C → Tab → Ctrl+V → expect()"
+            - generic [ref=e952]:
+              - paragraph [ref=e953]: Step 4 — Generate Summary
+              - button "Generate Summary" [disabled] [ref=e954]
+              - paragraph [ref=e955]: Enabled once Department, Secret Key, and Copy steps are complete.
+            - generic [ref=e956]:
+              - paragraph [ref=e957]: Workflow Result
+              - paragraph [ref=e958]: Complete Step 4 to see your results here.
+      - generic [ref=e961]:
+        - heading "📜 Scrolling" [level=2] [ref=e962]
+        - paragraph [ref=e963]: Scrolling a container versus scrolling the page, and content that only loads once you reach it.
+        - generic [ref=e965]:
+          - paragraph [ref=e967]: Scrolling Challenges
+          - paragraph [ref=e968]: Practice scrolling inside containers and infinite lazy loading pages.
+          - generic [ref=e969]:
+            - generic [ref=e970]:
+              - paragraph [ref=e972]: Scrollable Employee Directory
+              - paragraph [ref=e973]: Practice locating hidden items inside a scrollable container.
+              - paragraph [ref=e974]: "Target Employee: EMP-125"
+              - generic [ref=e975]:
+                - generic [ref=e976] [cursor=pointer]: EMP-001
+                - generic [ref=e977] [cursor=pointer]: EMP-002
+                - generic [ref=e978] [cursor=pointer]: EMP-003
+                - generic [ref=e979] [cursor=pointer]: EMP-004
+                - generic [ref=e980] [cursor=pointer]: EMP-005
+                - generic [ref=e981] [cursor=pointer]: EMP-006
+                - generic [ref=e982] [cursor=pointer]: EMP-007
+                - generic [ref=e983] [cursor=pointer]: EMP-008
+                - generic [ref=e984] [cursor=pointer]: EMP-009
+                - generic [ref=e985] [cursor=pointer]: EMP-010
+                - generic [ref=e986] [cursor=pointer]: EMP-011
+                - generic [ref=e987] [cursor=pointer]: EMP-012
+                - generic [ref=e988] [cursor=pointer]: EMP-013
+                - generic [ref=e989] [cursor=pointer]: EMP-014
+                - generic [ref=e990] [cursor=pointer]: EMP-015
+                - generic [ref=e991] [cursor=pointer]: EMP-016
+                - generic [ref=e992] [cursor=pointer]: EMP-017
+                - generic [ref=e993] [cursor=pointer]: EMP-018
+                - generic [ref=e994] [cursor=pointer]: EMP-019
+                - generic [ref=e995] [cursor=pointer]: EMP-020
+                - generic [ref=e996] [cursor=pointer]: EMP-021
+                - generic [ref=e997] [cursor=pointer]: EMP-022
+                - generic [ref=e998] [cursor=pointer]: EMP-023
+                - generic [ref=e999] [cursor=pointer]: EMP-024
+                - generic [ref=e1000] [cursor=pointer]: EMP-025
+                - generic [ref=e1001] [cursor=pointer]: EMP-026
+                - generic [ref=e1002] [cursor=pointer]: EMP-027
+                - generic [ref=e1003] [cursor=pointer]: EMP-028
+                - generic [ref=e1004] [cursor=pointer]: EMP-029
+                - generic [ref=e1005] [cursor=pointer]: EMP-030
+                - generic [ref=e1006] [cursor=pointer]: EMP-031
+                - generic [ref=e1007] [cursor=pointer]: EMP-032
+                - generic [ref=e1008] [cursor=pointer]: EMP-033
+                - generic [ref=e1009] [cursor=pointer]: EMP-034
+                - generic [ref=e1010] [cursor=pointer]: EMP-035
+                - generic [ref=e1011] [cursor=pointer]: EMP-036
+                - generic [ref=e1012] [cursor=pointer]: EMP-037
+                - generic [ref=e1013] [cursor=pointer]: EMP-038
+                - generic [ref=e1014] [cursor=pointer]: EMP-039
+                - generic [ref=e1015] [cursor=pointer]: EMP-040
+                - generic [ref=e1016] [cursor=pointer]: EMP-041
+                - generic [ref=e1017] [cursor=pointer]: EMP-042
+                - generic [ref=e1018] [cursor=pointer]: EMP-043
+                - generic [ref=e1019] [cursor=pointer]: EMP-044
+                - generic [ref=e1020] [cursor=pointer]: EMP-045
+                - generic [ref=e1021] [cursor=pointer]: EMP-046
+                - generic [ref=e1022] [cursor=pointer]: EMP-047
+                - generic [ref=e1023] [cursor=pointer]: EMP-048
+                - generic [ref=e1024] [cursor=pointer]: EMP-049
+                - generic [ref=e1025] [cursor=pointer]: EMP-050
+                - generic [ref=e1026] [cursor=pointer]: EMP-051
+                - generic [ref=e1027] [cursor=pointer]: EMP-052
+                - generic [ref=e1028] [cursor=pointer]: EMP-053
+                - generic [ref=e1029] [cursor=pointer]: EMP-054
+                - generic [ref=e1030] [cursor=pointer]: EMP-055
+                - generic [ref=e1031] [cursor=pointer]: EMP-056
+                - generic [ref=e1032] [cursor=pointer]: EMP-057
+                - generic [ref=e1033] [cursor=pointer]: EMP-058
+                - generic [ref=e1034] [cursor=pointer]: EMP-059
+                - generic [ref=e1035] [cursor=pointer]: EMP-060
+                - generic [ref=e1036] [cursor=pointer]: EMP-061
+                - generic [ref=e1037] [cursor=pointer]: EMP-062
+                - generic [ref=e1038] [cursor=pointer]: EMP-063
+                - generic [ref=e1039] [cursor=pointer]: EMP-064
+                - generic [ref=e1040] [cursor=pointer]: EMP-065
+                - generic [ref=e1041] [cursor=pointer]: EMP-066
+                - generic [ref=e1042] [cursor=pointer]: EMP-067
+                - generic [ref=e1043] [cursor=pointer]: EMP-068
+                - generic [ref=e1044] [cursor=pointer]: EMP-069
+                - generic [ref=e1045] [cursor=pointer]: EMP-070
+                - generic [ref=e1046] [cursor=pointer]: EMP-071
+                - generic [ref=e1047] [cursor=pointer]: EMP-072
+                - generic [ref=e1048] [cursor=pointer]: EMP-073
+                - generic [ref=e1049] [cursor=pointer]: EMP-074
+                - generic [ref=e1050] [cursor=pointer]: EMP-075
+                - generic [ref=e1051] [cursor=pointer]: EMP-076
+                - generic [ref=e1052] [cursor=pointer]: EMP-077
+                - generic [ref=e1053] [cursor=pointer]: EMP-078
+                - generic [ref=e1054] [cursor=pointer]: EMP-079
+                - generic [ref=e1055] [cursor=pointer]: EMP-080
+                - generic [ref=e1056] [cursor=pointer]: EMP-081
+                - generic [ref=e1057] [cursor=pointer]: EMP-082
+                - generic [ref=e1058] [cursor=pointer]: EMP-083
+                - generic [ref=e1059] [cursor=pointer]: EMP-084
+                - generic [ref=e1060] [cursor=pointer]: EMP-085
+                - generic [ref=e1061] [cursor=pointer]: EMP-086
+                - generic [ref=e1062] [cursor=pointer]: EMP-087
+                - generic [ref=e1063] [cursor=pointer]: EMP-088
+                - generic [ref=e1064] [cursor=pointer]: EMP-089
+                - generic [ref=e1065] [cursor=pointer]: EMP-090
+                - generic [ref=e1066] [cursor=pointer]: EMP-091
+                - generic [ref=e1067] [cursor=pointer]: EMP-092
+                - generic [ref=e1068] [cursor=pointer]: EMP-093
+                - generic [ref=e1069] [cursor=pointer]: EMP-094
+                - generic [ref=e1070] [cursor=pointer]: EMP-095
+                - generic [ref=e1071] [cursor=pointer]: EMP-096
+                - generic [ref=e1072] [cursor=pointer]: EMP-097
+                - generic [ref=e1073] [cursor=pointer]: EMP-098
+                - generic [ref=e1074] [cursor=pointer]: EMP-099
+                - generic [ref=e1075] [cursor=pointer]: EMP-100
+                - generic [ref=e1076] [cursor=pointer]: EMP-101
+                - generic [ref=e1077] [cursor=pointer]: EMP-102
+                - generic [ref=e1078] [cursor=pointer]: EMP-103
+                - generic [ref=e1079] [cursor=pointer]: EMP-104
+                - generic [ref=e1080] [cursor=pointer]: EMP-105
+                - generic [ref=e1081] [cursor=pointer]: EMP-106
+                - generic [ref=e1082] [cursor=pointer]: EMP-107
+                - generic [ref=e1083] [cursor=pointer]: EMP-108
+                - generic [ref=e1084] [cursor=pointer]: EMP-109
+                - generic [ref=e1085] [cursor=pointer]: EMP-110
+                - generic [ref=e1086] [cursor=pointer]: EMP-111
+                - generic [ref=e1087] [cursor=pointer]: EMP-112
+                - generic [ref=e1088] [cursor=pointer]: EMP-113
+                - generic [ref=e1089] [cursor=pointer]: EMP-114
+                - generic [ref=e1090] [cursor=pointer]: EMP-115
+                - generic [ref=e1091] [cursor=pointer]: EMP-116
+                - generic [ref=e1092] [cursor=pointer]: EMP-117
+                - generic [ref=e1093] [cursor=pointer]: EMP-118
+                - generic [ref=e1094] [cursor=pointer]: EMP-119
+                - generic [ref=e1095] [cursor=pointer]: EMP-120
+                - generic [ref=e1096] [cursor=pointer]: EMP-121
+                - generic [ref=e1097] [cursor=pointer]: EMP-122
+                - generic [ref=e1098] [cursor=pointer]: EMP-123
+                - generic [ref=e1099] [cursor=pointer]: EMP-124
+                - generic [ref=e1100] [cursor=pointer]: EMP-125
+                - generic [ref=e1101] [cursor=pointer]: EMP-126
+                - generic [ref=e1102] [cursor=pointer]: EMP-127
+                - generic [ref=e1103] [cursor=pointer]: EMP-128
+                - generic [ref=e1104] [cursor=pointer]: EMP-129
+                - generic [ref=e1105] [cursor=pointer]: EMP-130
+                - generic [ref=e1106] [cursor=pointer]: EMP-131
+                - generic [ref=e1107] [cursor=pointer]: EMP-132
+                - generic [ref=e1108] [cursor=pointer]: EMP-133
+                - generic [ref=e1109] [cursor=pointer]: EMP-134
+                - generic [ref=e1110] [cursor=pointer]: EMP-135
+                - generic [ref=e1111] [cursor=pointer]: EMP-136
+                - generic [ref=e1112] [cursor=pointer]: EMP-137
+                - generic [ref=e1113] [cursor=pointer]: EMP-138
+                - generic [ref=e1114] [cursor=pointer]: EMP-139
+                - generic [ref=e1115] [cursor=pointer]: EMP-140
+                - generic [ref=e1116] [cursor=pointer]: EMP-141
+                - generic [ref=e1117] [cursor=pointer]: EMP-142
+                - generic [ref=e1118] [cursor=pointer]: EMP-143
+                - generic [ref=e1119] [cursor=pointer]: EMP-144
+                - generic [ref=e1120] [cursor=pointer]: EMP-145
+                - generic [ref=e1121] [cursor=pointer]: EMP-146
+                - generic [ref=e1122] [cursor=pointer]: EMP-147
+                - generic [ref=e1123] [cursor=pointer]: EMP-148
+                - generic [ref=e1124] [cursor=pointer]: EMP-149
+                - generic [ref=e1125] [cursor=pointer]: EMP-150
+                - generic [ref=e1126] [cursor=pointer]: EMP-151
+                - generic [ref=e1127] [cursor=pointer]: EMP-152
+                - generic [ref=e1128] [cursor=pointer]: EMP-153
+                - generic [ref=e1129] [cursor=pointer]: EMP-154
+                - generic [ref=e1130] [cursor=pointer]: EMP-155
+                - generic [ref=e1131] [cursor=pointer]: EMP-156
+                - generic [ref=e1132] [cursor=pointer]: EMP-157
+                - generic [ref=e1133] [cursor=pointer]: EMP-158
+                - generic [ref=e1134] [cursor=pointer]: EMP-159
+                - generic [ref=e1135] [cursor=pointer]: EMP-160
+                - generic [ref=e1136] [cursor=pointer]: EMP-161
+                - generic [ref=e1137] [cursor=pointer]: EMP-162
+                - generic [ref=e1138] [cursor=pointer]: EMP-163
+                - generic [ref=e1139] [cursor=pointer]: EMP-164
+                - generic [ref=e1140] [cursor=pointer]: EMP-165
+                - generic [ref=e1141] [cursor=pointer]: EMP-166
+                - generic [ref=e1142] [cursor=pointer]: EMP-167
+                - generic [ref=e1143] [cursor=pointer]: EMP-168
+                - generic [ref=e1144] [cursor=pointer]: EMP-169
+                - generic [ref=e1145] [cursor=pointer]: EMP-170
+                - generic [ref=e1146] [cursor=pointer]: EMP-171
+                - generic [ref=e1147] [cursor=pointer]: EMP-172
+                - generic [ref=e1148] [cursor=pointer]: EMP-173
+                - generic [ref=e1149] [cursor=pointer]: EMP-174
+                - generic [ref=e1150] [cursor=pointer]: EMP-175
+                - generic [ref=e1151] [cursor=pointer]: EMP-176
+                - generic [ref=e1152] [cursor=pointer]: EMP-177
+                - generic [ref=e1153] [cursor=pointer]: EMP-178
+                - generic [ref=e1154] [cursor=pointer]: EMP-179
+                - generic [ref=e1155] [cursor=pointer]: EMP-180
+                - generic [ref=e1156] [cursor=pointer]: EMP-181
+                - generic [ref=e1157] [cursor=pointer]: EMP-182
+                - generic [ref=e1158] [cursor=pointer]: EMP-183
+                - generic [ref=e1159] [cursor=pointer]: EMP-184
+                - generic [ref=e1160] [cursor=pointer]: EMP-185
+                - generic [ref=e1161] [cursor=pointer]: EMP-186
+                - generic [ref=e1162] [cursor=pointer]: EMP-187
+                - generic [ref=e1163] [cursor=pointer]: EMP-188
+                - generic [ref=e1164] [cursor=pointer]: EMP-189
+                - generic [ref=e1165] [cursor=pointer]: EMP-190
+                - generic [ref=e1166] [cursor=pointer]: EMP-191
+                - generic [ref=e1167] [cursor=pointer]: EMP-192
+                - generic [ref=e1168] [cursor=pointer]: EMP-193
+                - generic [ref=e1169] [cursor=pointer]: EMP-194
+                - generic [ref=e1170] [cursor=pointer]: EMP-195
+                - generic [ref=e1171] [cursor=pointer]: EMP-196
+                - generic [ref=e1172] [cursor=pointer]: EMP-197
+                - generic [ref=e1173] [cursor=pointer]: EMP-198
+                - generic [ref=e1174] [cursor=pointer]: EMP-199
+                - generic [ref=e1175] [cursor=pointer]: EMP-200
+              - paragraph [ref=e1176]: "Selected Employee: None"
+            - generic [ref=e1177]:
+              - paragraph [ref=e1179]: Infinite Scroll Playground
+              - paragraph [ref=e1180]: Open a dedicated Book Store Catalog page with continuous lazy loading.
+              - button "Open Infinite Scroll Playground" [ref=e1181] [cursor=pointer]
+              - paragraph [ref=e1182]: "Target: Load all books and detect end of catalog."
+      - generic [ref=e1185]:
+        - heading "Dynamic Button" [level=2] [ref=e1186]
+        - paragraph [ref=e1187]: "Two synchronization scenarios: a delayed element appearance, and a button that mutates its own state."
+        - generic [ref=e1188]:
+          - generic [ref=e1189]:
+            - paragraph [ref=e1190]: Dynamic Button Appears
+            - paragraph [ref=e1191]: A brand-new button is injected into the DOM after a 3-second countdown.
+            - button "Start" [ref=e1192] [cursor=pointer]
+            - paragraph [ref=e1193]
+            - paragraph [ref=e1194]
+          - generic [ref=e1195]:
+            - paragraph [ref=e1196]: Dynamic Button State Change
+            - paragraph [ref=e1197]: The same button mutates its own text, color, and enabled state — no new elements are created.
+            - button "START" [ref=e1198] [cursor=pointer]
+            - paragraph [ref=e1199]
+      - generic [ref=e1201]:
+        - paragraph [ref=e1202]: Module 6
+        - heading "Browser Context, Tabs & Windows" [level=2] [ref=e1203]
+        - paragraph [ref=e1204]: Real tabs, real popups, real events — practice detecting, switching between, and closing them.
+      - generic [ref=e1206]:
+        - heading "New Tab vs New Window" [level=2] [ref=e1208]
+        - generic [ref=e1209]:
+          - generic [ref=e1210]:
+            - generic [ref=e1211]:
+              - paragraph [ref=e1212]: Open Documentation Tab
+              - paragraph [ref=e1213]: "Practice Note: wait for a new tab to open, then read and close it."
+              - button "Open Playwright Docs" [ref=e1214] [cursor=pointer]
+              - paragraph [ref=e1215]:
+                - text: "Tabs Open :"
+                - strong [ref=e1216]: "0"
+            - generic [ref=e1217]:
+              - paragraph [ref=e1218]: Open External Window
+              - paragraph [ref=e1219]: "Practice Note: wait for a popup window, then read and close it."
+              - button "Open Mobilewright Window" [ref=e1220] [cursor=pointer]
+              - paragraph [ref=e1221]:
+                - text: "Windows Open :"
+                - strong [ref=e1222]: "0"
+          - generic [ref=e1223]:
+            - paragraph [ref=e1224]: Activity Log
+            - paragraph [ref=e1225]: Live activity feed for both tabs and windows
+            - paragraph [ref=e1227]: No activity yet.
+            - generic [ref=e1228]:
+              - button "Close Last" [disabled] [ref=e1229]
+              - button "Close All" [disabled] [ref=e1230]
+              - button "Clear Log" [disabled] [ref=e1231]
+      - generic [ref=e1234]:
+        - heading "Browser Context Handling" [level=2] [ref=e1236]
+        - paragraph [ref=e1237]: Practice detecting and switching between multiple tabs and windows.
+        - generic [ref=e1238]:
+          - generic [ref=e1239]:
+            - paragraph [ref=e1240]: Single Random Tab
+            - paragraph [ref=e1241]: "Practice Note: verify the opened tab's URL."
+            - button "Open One Random Tab" [ref=e1242] [cursor=pointer]
+            - paragraph [ref=e1243]:
+              - text: "Last Opened :"
+              - strong [ref=e1244]: —
+          - generic [ref=e1245]:
+            - paragraph [ref=e1246]: Single Random Window
+            - paragraph [ref=e1247]: "Practice Note: verify the opened window's URL."
+            - button "Open One Random Window" [ref=e1248] [cursor=pointer]
+            - paragraph [ref=e1249]:
+              - text: "Last Window :"
+              - strong [ref=e1250]: —
+          - generic [ref=e1251]:
+            - paragraph [ref=e1252]: Multiple Tabs at Once
+            - paragraph [ref=e1253]: "Practice Note: open and verify several tabs at once."
+            - button "Open Three Tabs at Once" [ref=e1254] [cursor=pointer]
+            - paragraph [ref=e1255]: Opens Selenium, WebdriverIO and Cypress documentation in separate tabs.
+            - paragraph [ref=e1256]:
+              - text: "Tabs Opened :"
+              - strong [ref=e1257]: "0"
+          - generic [ref=e1258]:
+            - paragraph [ref=e1259]: Multiple Windows at Once
+            - paragraph [ref=e1260]: "Practice Note: open and verify several windows at once."
+            - button "Open Three Windows at Once" [ref=e1261] [cursor=pointer]
+            - paragraph [ref=e1262]: Opens VS Code, Eclipse and PyCharm download pages in separate windows.
+            - paragraph [ref=e1263]:
+              - text: "Windows Opened :"
+              - strong [ref=e1264]: "0"
+      - generic [ref=e1267]:
+        - heading "Parent ↔ Child Communication" [level=2] [ref=e1269]
+        - paragraph [ref=e1270]: Practice interacting with a popup window and verifying the result once it closes.
+        - generic [ref=e1271]:
+          - generic [ref=e1272]:
+            - button "Open Login Window" [ref=e1273] [cursor=pointer]
+            - paragraph [ref=e1274]:
+              - text: "Status:"
+              - strong [ref=e1275]: Not Logged In
+            - paragraph [ref=e1276]: "User: —"
+          - generic [ref=e1277]:
+            - paragraph [ref=e1278]: Automation Workflow
+            - list [ref=e1279]:
+              - listitem [ref=e1280]:
+                - generic [ref=e1281]: "1"
+                - paragraph [ref=e1282]: Click "Open Login Window"
+              - listitem [ref=e1283]:
+                - generic [ref=e1284]: "2"
+                - paragraph [ref=e1285]: Wait until popup opens
+              - listitem [ref=e1286]:
+                - generic [ref=e1287]: "3"
+                - paragraph [ref=e1288]: Switch automation focus to popup
+              - listitem [ref=e1289]:
+                - generic [ref=e1290]: "4"
+                - paragraph [ref=e1291]: Enter Email
+              - listitem [ref=e1292]:
+                - generic [ref=e1293]: "5"
+                - paragraph [ref=e1294]: Enter Password
+              - listitem [ref=e1295]:
+                - generic [ref=e1296]: "6"
+                - paragraph [ref=e1297]: Click Login
+              - listitem [ref=e1298]:
+                - generic [ref=e1299]: "7"
+                - paragraph [ref=e1300]: Wait for popup to close
+              - listitem [ref=e1301]:
+                - generic [ref=e1302]: "8"
+                - paragraph [ref=e1303]: Return to Parent Page
+              - listitem [ref=e1304]:
+                - generic [ref=e1305]: "9"
+                - paragraph [ref=e1306]: Verify logged in user
+      - generic [ref=e1308]:
+        - paragraph [ref=e1309]: Module 7
+        - heading "Frames & Embedded Content" [level=2] [ref=e1310]
+        - paragraph [ref=e1311]: Practice handling iframe elements, nested frames, and frame-switching techniques encountered in enterprise applications.
+      - generic [ref=e1313]:
+        - heading "Frame Counting" [level=2] [ref=e1315]
+        - generic [ref=e1316]:
+          - paragraph [ref=e1317]: A live travel dashboard embedding two independent widgets.
+          - paragraph [ref=e1318]: "Try it: read inside Frame 1, then Frame 2, switching between them and back out to this page."
+        - paragraph [ref=e1319]:
+          - text: "Iframes on this dashboard:"
+          - strong [ref=e1320]: "2"
+        - generic [ref=e1321]:
+          - iframe [ref=e1322]:
+            - generic [ref=f1e1]:
+              - paragraph [ref=f1e2]: ✈ Flight Status
+              - generic [ref=f1e3]:
+                - paragraph [ref=f1e4]:
+                  - generic [ref=f1e5]:
+                    - strong [ref=f1e6]: PW101
+                    - text: London → New York
+                  - generic [ref=f1e7]: On Time
+                - paragraph [ref=f1e8]:
+                  - generic [ref=f1e9]:
+                    - strong [ref=f1e10]: PW202
+                    - text: Dubai → Singapore
+                  - generic [ref=f1e11]: Delayed
+          - iframe [ref=e1323]:
+            - generic [ref=f2e1]:
+              - paragraph [ref=f2e2]: 🏨 Hotel Availability
+              - generic [ref=f2e3]:
+                - paragraph [ref=f2e4]:
+                  - strong [ref=f2e6]: Grand Plaza
+                  - generic [ref=f2e7]: 3 Rooms
+                - paragraph [ref=f2e8]:
+                  - strong [ref=f2e10]: City Suites
+                  - generic [ref=f2e11]: 7 Rooms
+      - generic [ref=e1326]:
+        - heading "Payment Gateway Frame" [level=2] [ref=e1328]
+        - paragraph [ref=e1329]: A modern checkout form embedded inside an iframe — just like real payment gateways.
+        - generic [ref=e1330]:
+          - generic [ref=e1332]:
+            - generic [ref=e1333]: <iframe id="frame-payment-82" name="payment-gateway-82">
+            - iframe [ref=e1334]:
+              - generic [ref=f3e1]:
+                - paragraph [ref=f3e2]: Secure Payment Gateway
+                - generic [ref=f3e3]: Card Holder
+                - textbox "Card Holder" [ref=f3e4]:
+                  - /placeholder: Name on card
+                - generic [ref=f3e5]: Card Number
+                - textbox "Card Number" [ref=f3e6]:
+                  - /placeholder: 1234 5678 9012 3456
+                - generic [ref=f3e7]:
+                  - generic [ref=f3e8]:
+                    - generic [ref=f3e9]: Expiry Date
+                    - textbox "Expiry Date" [ref=f3e10]:
+                      - /placeholder: MM/YY
+                  - generic [ref=f3e11]:
+                    - generic [ref=f3e12]: CVV
+                    - textbox "CVV" [ref=f3e13]:
+                      - /placeholder: •••
+                - button "Pay Now" [ref=f3e14] [cursor=pointer]
+                - generic [ref=f3e15]:
+                  - paragraph [ref=f3e16]: Practice Instructions
+                  - list [ref=f3e17]:
+                    - listitem [ref=f3e18]: Choose one of the test cards.
+                    - listitem [ref=f3e19]: Enter the card details exactly.
+                    - listitem [ref=f3e20]: Click Pay Now.
+                    - listitem [ref=f3e21]: Validate the Payment Result panel.
+                    - listitem [ref=f3e22]: Verify Status and Balance.
+          - generic [ref=e1335]:
+            - generic [ref=e1336]:
+              - paragraph [ref=e1337]: Test Card Information
+              - generic [ref=e1338]:
+                - generic [ref=e1339]:
+                  - paragraph [ref=e1340]: Dataset 1
+                  - paragraph [ref=e1341]: Card Holder
+                  - paragraph [ref=e1342]: JOHN SMITH
+                  - paragraph [ref=e1343]: Card Number
+                  - paragraph [ref=e1344]: 4111 1111 1111 1111
+                  - paragraph [ref=e1345]: Expiry
+                  - paragraph [ref=e1346]: 12/29
+                  - paragraph [ref=e1347]: CVV
+                  - paragraph [ref=e1348]: "123"
+                  - paragraph [ref=e1349]: Status
+                  - paragraph [ref=e1350]: Approved
+                  - paragraph [ref=e1351]: Available Balance
+                  - paragraph [ref=e1352]: ₹1,25,000
+                - generic [ref=e1353]:
+                  - paragraph [ref=e1354]: Dataset 2
+                  - paragraph [ref=e1355]: Card Holder
+                  - paragraph [ref=e1356]: ALEX JOHNSON
+                  - paragraph [ref=e1357]: Card Number
+                  - paragraph [ref=e1358]: 5555 5555 5555 4444
+                  - paragraph [ref=e1359]: Expiry
+                  - paragraph [ref=e1360]: 08/28
+                  - paragraph [ref=e1361]: CVV
+                  - paragraph [ref=e1362]: "456"
+                  - paragraph [ref=e1363]: Status
+                  - paragraph [ref=e1364]: Insufficient Balance
+                  - paragraph [ref=e1365]: Available Balance
+                  - paragraph [ref=e1366]: ₹120
+            - generic [ref=e1367]:
+              - paragraph [ref=e1368]: Payment Result
+              - generic [ref=e1369]:
+                - paragraph [ref=e1370]: "Payment Status: —"
+                - paragraph [ref=e1371]: "Balance: —"
+                - paragraph [ref=e1372]: "Result: Fill the form and click Pay Now"
+        - paragraph [ref=e1373]: 💡 Most payment gateways use iframes to isolate sensitive card data.
+      - generic [ref=e1376]:
+        - heading "Advanced Frame Handling" [level=2] [ref=e1378]
+        - paragraph [ref=e1379]: Practice nested frames, child frames, dynamic iframes, and frame discovery techniques.
+        - generic [ref=e1380]:
+          - generic [ref=e1381]:
+            - paragraph [ref=e1382]: Nested Frames
+            - paragraph [ref=e1383]: An enquiry form whose Travel Preference section lives inside its own nested iframe.
+            - generic [ref=e1384]:
+              - generic [ref=e1385]: <iframe id="frame-feedback" name="feedback-portal">
+              - iframe [ref=e1386]:
+                - generic [ref=f4e2]:
+                  - paragraph [ref=f4e3]: 📋 Travel Enquiry Form
+                  - generic [ref=f4e4]: Full Name *
+                  - textbox "Full Name *" [ref=f4e5]:
+                    - /placeholder: Your name
+                  - generic [ref=f4e6]: Email *
+                  - textbox "Email *" [ref=f4e7]:
+                    - /placeholder: email@example.com
+                  - paragraph [ref=f4e8]: Travel Preference (Child Frame)
+                  - iframe [ref=f4e9]:
+                    - generic [ref=f6e1]:
+                      - paragraph [ref=f6e2]: Travel Preferences
+                      - generic [ref=f6e3] [cursor=pointer]:
+                        - radio "Business" [ref=f6e4]
+                        - text: Business
+                      - generic [ref=f6e5] [cursor=pointer]:
+                        - radio "Family" [ref=f6e6]
+                        - text: Family
+                      - generic [ref=f6e7] [cursor=pointer]:
+                        - radio "Solo Traveller" [ref=f6e8]
+                        - text: Solo Traveller
+                      - generic [ref=f6e9] [cursor=pointer]:
+                        - radio "Adventure" [ref=f6e10]
+                        - text: Adventure
+                  - paragraph [ref=f4e10]: Complete Full Name and Email to unlock
+                  - paragraph [ref=f4e11]: Submit appears once the name and email are valid and a preference is chosen.
+            - generic [ref=e1387]:
+              - paragraph [ref=e1388]: Students Should Automate
+              - paragraph [ref=e1389]: Parent Frame → Child Frame → Back to Parent → Submit → Validate success message
+          - generic [ref=e1390]:
+            - paragraph [ref=e1391]: Dynamic Frame
+            - paragraph [ref=e1392]: Iframes can appear, reload, or change at runtime.
+            - button "Load Complaint Form" [ref=e1393] [cursor=pointer]
+            - generic [ref=e1394]:
+              - paragraph [ref=e1395]: Students Should Automate
+              - list [ref=e1396]:
+                - listitem [ref=e1397]:
+                  - generic [ref=e1398]: ✓
+                  - text: Dynamic iframe
+                - listitem [ref=e1399]:
+                  - generic [ref=e1400]: ✓
+                  - text: Fill mandatory fields
+                - listitem [ref=e1401]:
+                  - generic [ref=e1402]: ✓
+                  - text: Dropdown selection
+                - listitem [ref=e1403]:
+                  - generic [ref=e1404]: ✓
+                  - text: Submit
+                - listitem [ref=e1405]:
+                  - generic [ref=e1406]: ✓
+                  - text: Success validation
+      - generic [ref=e1408]:
+        - paragraph [ref=e1409]: Module 8
+        - heading "Calendars & Date Pickers" [level=2] [ref=e1410]
+        - paragraph [ref=e1411]: Six progressive exercises — from native HTML inputs with real business rules to dual calendars and enterprise date fields.
+      - generic [ref=e1413]:
+        - heading "Native HTML5 Date Input" [level=2] [ref=e1415]
+        - paragraph [ref=e1416]:
+          - generic [ref=e1417]:
+            - text: Date of birth must be at least
+            - generic [ref=e1418]: 18 years
+            - text: ago.
+          - generic [ref=e1419]:
+            - text: Passport expiry must be after the issued date and within
+            - generic [ref=e1420]: 10 years
+            - text: of it.
+          - generic [ref=e1421]: Type an invalid value — the page validates, it does not stop you.
+        - generic [ref=e1422]:
+          - generic [ref=e1423]:
+            - generic [ref=e1424]: Date of Birth
+            - textbox "Date of Birth" [ref=e1425]
+            - paragraph [ref=e1426]: "Selected: —"
+          - generic [ref=e1427]:
+            - generic [ref=e1428]: Passport Issued Date
+            - textbox "Passport Issued Date" [ref=e1429]
+            - paragraph [ref=e1430]: "Selected: —"
+          - generic [ref=e1431]:
+            - generic [ref=e1432]: Passport Expiry Date
+            - textbox "Passport Expiry Date" [ref=e1433]
+            - paragraph [ref=e1434]: "Selected: —"
+        - status [ref=e1435]: Enter an issued date and an expiry date.
+        - status [ref=e1436]: idle
+      - button "Learn More Three fields, three business rules, and the messages you assert against" [ref=e1439] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e1440]: ▸
+        - generic [ref=e1441]: Learn More
+        - generic [ref=e1442]: Three fields, three business rules, and the messages you assert against
+      - generic [ref=e1443]:
+        - generic [ref=e1445]:
+          - heading "jQuery UI Datepicker" [level=2] [ref=e1447]
+          - textbox "Click to pick a date…" [ref=e1449] [cursor=pointer]
+          - paragraph [ref=e1450]:
+            - text: "Selected Date:"
+            - generic [ref=e1451]: —
+        - generic [ref=e1453]:
+          - heading "Dropdown-Based Datepicker" [level=2] [ref=e1455]
+          - generic [ref=e1456]:
+            - combobox [ref=e1457]:
+              - option "January"
+              - option "February"
+              - option "March"
+              - option "April"
+              - option "May"
+              - option "June" [selected]
+              - option "July"
+              - option "August"
+              - option "September"
+              - option "October"
+              - option "November"
+              - option "December"
+            - combobox [ref=e1458]:
+              - option "1950"
+              - option "1951"
+              - option "1952"
+              - option "1953"
+              - option "1954"
+              - option "1955"
+              - option "1956"
+              - option "1957"
+              - option "1958"
+              - option "1959"
+              - option "1960"
+              - option "1961"
+              - option "1962"
+              - option "1963"
+              - option "1964"
+              - option "1965"
+              - option "1966"
+              - option "1967"
+              - option "1968"
+              - option "1969"
+              - option "1970"
+              - option "1971"
+              - option "1972"
+              - option "1973"
+              - option "1974"
+              - option "1975"
+              - option "1976"
+              - option "1977"
+              - option "1978"
+              - option "1979"
+              - option "1980"
+              - option "1981"
+              - option "1982"
+              - option "1983"
+              - option "1984"
+              - option "1985"
+              - option "1986"
+              - option "1987"
+              - option "1988"
+              - option "1989"
+              - option "1990"
+              - option "1991"
+              - option "1992"
+              - option "1993"
+              - option "1994"
+              - option "1995"
+              - option "1996"
+              - option "1997"
+              - option "1998"
+              - option "1999"
+              - option "2000"
+              - option "2001"
+              - option "2002"
+              - option "2003"
+              - option "2004"
+              - option "2005"
+              - option "2006"
+              - option "2007"
+              - option "2008"
+              - option "2009"
+              - option "2010"
+              - option "2011"
+              - option "2012"
+              - option "2013"
+              - option "2014"
+              - option "2015"
+              - option "2016"
+              - option "2017"
+              - option "2018"
+              - option "2019"
+              - option "2020"
+              - option "2021"
+              - option "2022"
+              - option "2023"
+              - option "2024"
+              - option "2025"
+              - option "2026" [selected]
+              - option "2027"
+              - option "2028"
+              - option "2029"
+              - option "2030"
+              - option "2031"
+              - option "2032"
+              - option "2033"
+              - option "2034"
+              - option "2035"
+              - option "2036"
+          - grid [ref=e1460]:
+            - rowgroup [ref=e1461]:
+              - row [ref=e1462]:
+                - columnheader "Su" [ref=e1463]
+                - columnheader "Mo" [ref=e1464]
+                - columnheader "Tu" [ref=e1465]
+                - columnheader "We" [ref=e1466]
+                - columnheader "Th" [ref=e1467]
+                - columnheader "Fr" [ref=e1468]
+                - columnheader "Sa" [ref=e1469]
+            - rowgroup [ref=e1470]:
+              - row [ref=e1471]:
+                - gridcell [ref=e1472]
+                - gridcell "1" [ref=e1473] [cursor=pointer]
+                - gridcell "2" [ref=e1474] [cursor=pointer]
+                - gridcell "3" [ref=e1475] [cursor=pointer]
+                - gridcell "4" [ref=e1476] [cursor=pointer]
+                - gridcell "5" [ref=e1477] [cursor=pointer]
+                - gridcell "6" [ref=e1478] [cursor=pointer]
+              - row [ref=e1479]:
+                - gridcell "7" [ref=e1480] [cursor=pointer]
+                - gridcell "8" [ref=e1481] [cursor=pointer]
+                - gridcell "9" [ref=e1482] [cursor=pointer]
+                - gridcell "10" [ref=e1483] [cursor=pointer]
+                - gridcell "11" [ref=e1484] [cursor=pointer]
+                - gridcell "12" [ref=e1485] [cursor=pointer]
+                - gridcell "13" [ref=e1486] [cursor=pointer]
+              - row [ref=e1487]:
+                - gridcell "14" [ref=e1488] [cursor=pointer]
+                - gridcell "15" [ref=e1489] [cursor=pointer]
+                - gridcell "16" [ref=e1490] [cursor=pointer]
+                - gridcell "17" [ref=e1491] [cursor=pointer]
+                - gridcell "18" [ref=e1492] [cursor=pointer]
+                - gridcell "19" [ref=e1493] [cursor=pointer]
+                - gridcell "20" [ref=e1494] [cursor=pointer]
+              - row [ref=e1495]:
+                - gridcell "21" [ref=e1496] [cursor=pointer]
+                - gridcell "22" [ref=e1497] [cursor=pointer]
+                - gridcell "23" [ref=e1498] [cursor=pointer]
+                - gridcell "24" [ref=e1499] [cursor=pointer]
+                - gridcell "25" [ref=e1500] [cursor=pointer]
+                - gridcell "26" [ref=e1501] [cursor=pointer]
+                - gridcell "27" [ref=e1502] [cursor=pointer]
+              - row [ref=e1503]:
+                - gridcell "28" [ref=e1504] [cursor=pointer]
+                - gridcell "29" [ref=e1505] [cursor=pointer]
+                - gridcell "30" [ref=e1506] [cursor=pointer]
+                - gridcell [ref=e1507]
+                - gridcell [ref=e1508]
+                - gridcell [ref=e1509]
+                - gridcell [ref=e1510]
+              - row [ref=e1511]:
+                - gridcell [ref=e1512]
+                - gridcell [ref=e1513]
+                - gridcell [ref=e1514]
+                - gridcell [ref=e1515]
+                - gridcell [ref=e1516]
+                - gridcell [ref=e1517]
+                - gridcell [ref=e1518]
+          - paragraph [ref=e1519]:
+            - text: "Selected Date:"
+            - generic [ref=e1520]: —
+      - button "Learn More Readonly fields, month navigation, and jumping straight to a year" [ref=e1523] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e1524]: ▸
+        - generic [ref=e1525]: Learn More
+        - generic [ref=e1526]: Readonly fields, month navigation, and jumping straight to a year
+      - generic [ref=e1528]:
+        - heading "Multi-Calendar" [level=2] [ref=e1530]
+        - generic [ref=e1531]:
+          - button "‹" [ref=e1532] [cursor=pointer]
+          - generic [ref=e1533]: Nov 2026 – Jan 2027
+          - button "›" [ref=e1534] [cursor=pointer]
+        - generic [ref=e1535]:
+          - generic [ref=e1536]:
+            - paragraph [ref=e1537]: November 2026
+            - grid [ref=e1538]:
+              - rowgroup [ref=e1539]:
+                - row [ref=e1540]:
+                  - columnheader "Su" [ref=e1541]
+                  - columnheader "Mo" [ref=e1542]
+                  - columnheader "Tu" [ref=e1543]
+                  - columnheader "We" [ref=e1544]
+                  - columnheader "Th" [ref=e1545]
+                  - columnheader "Fr" [ref=e1546]
+                  - columnheader "Sa" [ref=e1547]
+              - rowgroup [ref=e1548]:
+                - row [ref=e1549]:
+                  - gridcell "1" [ref=e1550] [cursor=pointer]
+                  - gridcell "2" [ref=e1551] [cursor=pointer]
+                  - gridcell "3" [ref=e1552] [cursor=pointer]
+                  - gridcell "4" [ref=e1553] [cursor=pointer]
+                  - gridcell "5" [ref=e1554] [cursor=pointer]
+                  - gridcell "6" [ref=e1555] [cursor=pointer]
+                  - gridcell "7" [ref=e1556] [cursor=pointer]
+                - row [ref=e1557]:
+                  - gridcell "8" [ref=e1558] [cursor=pointer]
+                  - gridcell "9" [ref=e1559] [cursor=pointer]
+                  - gridcell "10" [ref=e1560] [cursor=pointer]
+                  - gridcell "11" [ref=e1561] [cursor=pointer]
+                  - gridcell "12" [ref=e1562] [cursor=pointer]
+                  - gridcell "13" [ref=e1563] [cursor=pointer]
+                  - gridcell "14" [ref=e1564] [cursor=pointer]
+                - row [ref=e1565]:
+                  - gridcell "15" [ref=e1566] [cursor=pointer]
+                  - gridcell "16" [ref=e1567] [cursor=pointer]
+                  - gridcell "17" [ref=e1568] [cursor=pointer]
+                  - gridcell "18" [ref=e1569] [cursor=pointer]
+                  - gridcell "19" [ref=e1570] [cursor=pointer]
+                  - gridcell "20" [ref=e1571] [cursor=pointer]
+                  - gridcell "21" [ref=e1572] [cursor=pointer]
+                - row [ref=e1573]:
+                  - gridcell "22" [ref=e1574] [cursor=pointer]
+                  - gridcell "23" [ref=e1575] [cursor=pointer]
+                  - gridcell "24" [ref=e1576] [cursor=pointer]
+                  - gridcell "25" [ref=e1577] [cursor=pointer]
+                  - gridcell "26" [ref=e1578] [cursor=pointer]
+                  - gridcell "27" [ref=e1579] [cursor=pointer]
+                  - gridcell "28" [ref=e1580] [cursor=pointer]
+                - row [ref=e1581]:
+                  - gridcell "29" [ref=e1582] [cursor=pointer]
+                  - gridcell "30" [ref=e1583] [cursor=pointer]
+                  - gridcell [ref=e1584]
+                  - gridcell [ref=e1585]
+                  - gridcell [ref=e1586]
+                  - gridcell [ref=e1587]
+                  - gridcell [ref=e1588]
+                - row [ref=e1589]:
+                  - gridcell [ref=e1590]
+                  - gridcell [ref=e1591]
+                  - gridcell [ref=e1592]
+                  - gridcell [ref=e1593]
+                  - gridcell [ref=e1594]
+                  - gridcell [ref=e1595]
+                  - gridcell [ref=e1596]
+          - generic [ref=e1597]:
+            - paragraph [ref=e1598]: December 2026
+            - grid [ref=e1599]:
+              - rowgroup [ref=e1600]:
+                - row [ref=e1601]:
+                  - columnheader "Su" [ref=e1602]
+                  - columnheader "Mo" [ref=e1603]
+                  - columnheader "Tu" [ref=e1604]
+                  - columnheader "We" [ref=e1605]
+                  - columnheader "Th" [ref=e1606]
+                  - columnheader "Fr" [ref=e1607]
+                  - columnheader "Sa" [ref=e1608]
+              - rowgroup [ref=e1609]:
+                - row [ref=e1610]:
+                  - gridcell [ref=e1611]
+                  - gridcell [ref=e1612]
+                  - gridcell "1" [ref=e1613] [cursor=pointer]
+                  - gridcell "2" [ref=e1614] [cursor=pointer]
+                  - gridcell "3" [ref=e1615] [cursor=pointer]
+                  - gridcell "4" [ref=e1616] [cursor=pointer]
+                  - gridcell "5" [ref=e1617] [cursor=pointer]
+                - row [ref=e1618]:
+                  - gridcell "6" [ref=e1619] [cursor=pointer]
+                  - gridcell "7" [ref=e1620] [cursor=pointer]
+                  - gridcell "8" [ref=e1621] [cursor=pointer]
+                  - gridcell "9" [ref=e1622] [cursor=pointer]
+                  - gridcell "10" [ref=e1623] [cursor=pointer]
+                  - gridcell "11" [ref=e1624] [cursor=pointer]
+                  - gridcell "12" [ref=e1625] [cursor=pointer]
+                - row [ref=e1626]:
+                  - gridcell "13" [ref=e1627] [cursor=pointer]
+                  - gridcell "14" [ref=e1628] [cursor=pointer]
+                  - gridcell "15" [ref=e1629] [cursor=pointer]
+                  - gridcell "16" [ref=e1630] [cursor=pointer]
+                  - gridcell "17" [ref=e1631] [cursor=pointer]
+                  - gridcell "18" [ref=e1632] [cursor=pointer]
+                  - gridcell "19" [ref=e1633] [cursor=pointer]
+                - row [ref=e1634]:
+                  - gridcell "20" [ref=e1635] [cursor=pointer]
+                  - gridcell "21" [ref=e1636] [cursor=pointer]
+                  - gridcell "22" [ref=e1637] [cursor=pointer]
+                  - gridcell "23" [ref=e1638] [cursor=pointer]
+                  - gridcell "24" [ref=e1639] [cursor=pointer]
+                  - gridcell "25" [ref=e1640] [cursor=pointer]
+                  - gridcell "26" [ref=e1641] [cursor=pointer]
+                - row [ref=e1642]:
+                  - gridcell "27" [ref=e1643] [cursor=pointer]
+                  - gridcell "28" [ref=e1644] [cursor=pointer]
+                  - gridcell "29" [ref=e1645] [cursor=pointer]
+                  - gridcell "30" [ref=e1646] [cursor=pointer]
+                  - gridcell "31" [ref=e1647] [cursor=pointer]
+                  - gridcell [ref=e1648]
+                  - gridcell [ref=e1649]
+                - row [ref=e1650]:
+                  - gridcell [ref=e1651]
+                  - gridcell [ref=e1652]
+                  - gridcell [ref=e1653]
+                  - gridcell [ref=e1654]
+                  - gridcell [ref=e1655]
+                  - gridcell [ref=e1656]
+                  - gridcell [ref=e1657]
+          - generic [ref=e1658]:
+            - paragraph [ref=e1659]: January 2027
+            - grid [ref=e1660]:
+              - rowgroup [ref=e1661]:
+                - row [ref=e1662]:
+                  - columnheader "Su" [ref=e1663]
+                  - columnheader "Mo" [ref=e1664]
+                  - columnheader "Tu" [ref=e1665]
+                  - columnheader "We" [ref=e1666]
+                  - columnheader "Th" [ref=e1667]
+                  - columnheader "Fr" [ref=e1668]
+                  - columnheader "Sa" [ref=e1669]
+              - rowgroup [ref=e1670]:
+                - row [ref=e1671]:
+                  - gridcell [ref=e1672]
+                  - gridcell [ref=e1673]
+                  - gridcell [ref=e1674]
+                  - gridcell [ref=e1675]
+                  - gridcell [ref=e1676]
+                  - gridcell "1" [ref=e1677] [cursor=pointer]
+                  - gridcell "2" [ref=e1678] [cursor=pointer]
+                - row [ref=e1679]:
+                  - gridcell "3" [ref=e1680] [cursor=pointer]
+                  - gridcell "4" [ref=e1681] [cursor=pointer]
+                  - gridcell "5" [ref=e1682] [cursor=pointer]
+                  - gridcell "6" [ref=e1683] [cursor=pointer]
+                  - gridcell "7" [ref=e1684] [cursor=pointer]
+                  - gridcell "8" [ref=e1685] [cursor=pointer]
+                  - gridcell "9" [ref=e1686] [cursor=pointer]
+                - row [ref=e1687]:
+                  - gridcell "10" [ref=e1688] [cursor=pointer]
+                  - gridcell "11" [ref=e1689] [cursor=pointer]
+                  - gridcell "12" [ref=e1690] [cursor=pointer]
+                  - gridcell "13" [ref=e1691] [cursor=pointer]
+                  - gridcell "14" [ref=e1692] [cursor=pointer]
+                  - gridcell "15" [ref=e1693] [cursor=pointer]
+                  - gridcell "16" [ref=e1694] [cursor=pointer]
+                - row [ref=e1695]:
+                  - gridcell "17" [ref=e1696] [cursor=pointer]
+                  - gridcell "18" [ref=e1697] [cursor=pointer]
+                  - gridcell "19" [ref=e1698] [cursor=pointer]
+                  - gridcell "20" [ref=e1699] [cursor=pointer]
+                  - gridcell "21" [ref=e1700] [cursor=pointer]
+                  - gridcell "22" [ref=e1701] [cursor=pointer]
+                  - gridcell "23" [ref=e1702] [cursor=pointer]
+                - row [ref=e1703]:
+                  - gridcell "24" [ref=e1704] [cursor=pointer]
+                  - gridcell "25" [ref=e1705] [cursor=pointer]
+                  - gridcell "26" [ref=e1706] [cursor=pointer]
+                  - gridcell "27" [ref=e1707] [cursor=pointer]
+                  - gridcell "28" [ref=e1708] [cursor=pointer]
+                  - gridcell "29" [ref=e1709] [cursor=pointer]
+                  - gridcell "30" [ref=e1710] [cursor=pointer]
+                - row [ref=e1711]:
+                  - gridcell "31" [ref=e1712] [cursor=pointer]
+                  - gridcell [ref=e1713]
+                  - gridcell [ref=e1714]
+                  - gridcell [ref=e1715]
+                  - gridcell [ref=e1716]
+                  - gridcell [ref=e1717]
+                  - gridcell [ref=e1718]
+        - paragraph [ref=e1719]:
+          - text: "Selected Journey:"
+          - generic [ref=e1720]: Click any date to begin
+        - button "Clear selection" [ref=e1721] [cursor=pointer]
+      - button "Learn More Three panels, one repeated day number, and how to name the right cell" [ref=e1724] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e1725]: ▸
+        - generic [ref=e1726]: Learn More
+        - generic [ref=e1727]: Three panels, one repeated day number, and how to name the right cell
+      - generic [ref=e1729]:
+        - heading "Dual Calendar" [level=2] [ref=e1731]
+        - paragraph [ref=e1732]:
+          - generic [ref=e1733]: Past dates are not selectable.
+          - generic [ref=e1734]:
+            - text: Minimum stay
+            - generic [ref=e1735]: 2 nights
+            - text: .
+          - generic [ref=e1736]:
+            - text: Maximum booking
+            - generic [ref=e1737]: 30 days
+            - text: .
+          - generic [ref=e1738]: A rejected check-out is not applied — assert the message.
+        - status [ref=e1739]: Select a check-in date to begin.
+        - button "Select check-in and check-out dates" [ref=e1741] [cursor=pointer]:
+          - generic [ref=e1745]:
+            - generic [ref=e1746]:
+              - generic [ref=e1747]: Check-in
+              - generic [ref=e1748]: Add date
+            - generic [ref=e1749]: —
+            - generic [ref=e1750]:
+              - generic [ref=e1751]: Check-out
+              - generic [ref=e1752]: Add date
+      - button "Learn More Two panels behind one field, and the three rules that refuse a bad stay" [ref=e1755] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e1756]: ▸
+        - generic [ref=e1757]: Learn More
+        - generic [ref=e1758]: Two panels behind one field, and the three rules that refuse a bad stay
+      - generic [ref=e1760]:
+        - heading "Enterprise Date Inputs" [level=2] [ref=e1762]
+        - generic [ref=e1763]:
+          - generic [ref=e1764]:
+            - paragraph [ref=e1765]: Readonly Date Field
+            - paragraph [ref=e1766]: This field simulates an existing date already stored in an enterprise application. Users cannot type directly because the field is readonly.
+            - generic [ref=e1767]: Customer Date of Birth
+            - generic [ref=e1768]:
+              - textbox "Customer Date of Birth" [ref=e1769]: 11/04/2026
+              - generic [aria-hidden] [ref=e1770]: 🔒
+            - paragraph [ref=e1771]: 🔒 Existing value retrieved from the system. Automation engineers typically interact with the calendar popup — in some legacy applications, the readonly attribute may be removed using JavaScript for automation purposes.
+          - generic [ref=e1772]:
+            - paragraph [ref=e1773]: Hybrid Date Field (Type or Calendar Selection)
+            - paragraph [ref=e1774]:
+              - text: Type a date directly
+              - emphasis [ref=e1775]: or
+              - text: click the 📅 icon to open a calendar popup — both inputs update the same field. Typed values must be
+              - code [ref=e1776]: mm/dd/yyyy
+              - text: and a real calendar date.
+            - generic [ref=e1777]:
+              - textbox "mm/dd/yyyy" [ref=e1778]
+              - button "Open calendar" [ref=e1779] [cursor=pointer]: 📅
+            - paragraph [ref=e1780]: "Value: —"
+      - button "Learn More Readonly values you did not set, and one field with two ways in" [ref=e1783] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e1784]: ▸
+        - generic [ref=e1785]: Learn More
+        - generic [ref=e1786]: Readonly values you did not set, and one field with two ways in
+      - generic [ref=e1787]:
+        - paragraph [ref=e1788]: Module 9
+        - heading "Advanced UI Elements" [level=2] [ref=e1789]
+        - paragraph [ref=e1790]: Practice automating complex visual components frequently used in enterprise dashboards and modern web applications.
+      - generic [ref=e1791]:
+        - generic [ref=e1792]:
+          - generic [ref=e1793]:
+            - heading "Interactive SVG Bar Chart" [level=2] [ref=e1795]
+            - paragraph [ref=e1796]: A monthly sales dashboard. Hover a bar for details, click a bar to select it.
+            - img "Bar chart of monthly sales from January to May" [ref=e1797]:
+              - generic [ref=e1798] [cursor=pointer]
+              - generic [ref=e1799] [cursor=pointer]
+              - generic [ref=e1800] [cursor=pointer]
+              - generic [ref=e1801] [cursor=pointer]
+              - generic [ref=e1802] [cursor=pointer]
+              - generic [ref=e1803]: "120"
+              - generic [ref=e1804]: "200"
+              - generic [ref=e1805]: "150"
+              - generic [ref=e1806]: "80"
+              - generic [ref=e1807]: "170"
+              - generic [ref=e1808]: Jan
+              - generic [ref=e1809]: Feb
+              - generic [ref=e1810]: Mar
+              - generic [ref=e1811]: Apr
+              - generic [ref=e1812]: May
+            - generic [ref=e1813]:
+              - paragraph [ref=e1814]: Hover a bar to see its value
+              - paragraph [ref=e1815]: "Selected: none"
+            - generic [ref=e1816]:
+              - paragraph [ref=e1817]: Automation Objectives
+              - list [ref=e1818]:
+                - listitem [ref=e1819]:
+                  - generic [ref=e1820]: ✓
+                  - text: Count bars
+                - listitem [ref=e1821]:
+                  - generic [ref=e1822]: ✓
+                  - text: Find highest value
+                - listitem [ref=e1823]:
+                  - generic [ref=e1824]: ✓
+                  - text: Find lowest value
+                - listitem [ref=e1825]:
+                  - generic [ref=e1826]: ✓
+                  - text: Click highest bar
+                - listitem [ref=e1827]:
+                  - generic [ref=e1828]: ✓
+                  - text: Verify tooltip
+                - listitem [ref=e1829]:
+                  - generic [ref=e1830]: ✓
+                  - text: Validate updated values
+              - generic [ref=e1831]:
+                - generic [ref=e1832]: SVG Rect
+                - generic [ref=e1833]: SVG Text
+                - generic [ref=e1834]: Hover
+                - generic [ref=e1835]: Dynamic Attributes
+                - generic [ref=e1836]: Click
+          - generic [ref=e1837]:
+            - heading "Interactive SVG Pie Chart" [level=2] [ref=e1839]
+            - paragraph [ref=e1840]: Traffic sources by channel. Hover a slice to expand it, click to select.
+            - generic [ref=e1841]:
+              - img "Pie chart of traffic sources" [ref=e1842]:
+                - generic [ref=e1843] [cursor=pointer]
+                - generic [ref=e1844] [cursor=pointer]
+                - generic [ref=e1845] [cursor=pointer]
+                - generic [ref=e1846] [cursor=pointer]
+              - list [ref=e1847]:
+                - listitem [ref=e1848]: Organic Search — 35%
+                - listitem [ref=e1850]: Direct — 25%
+                - listitem [ref=e1852]: Social Media — 20%
+                - listitem [ref=e1854]: Referral — 20%
+            - generic [ref=e1856]:
+              - paragraph [ref=e1857]: Hover a slice to see details
+              - paragraph [ref=e1858]: "Selected Slice: none"
+            - generic [ref=e1859]:
+              - paragraph [ref=e1860]: Automation Objectives
+              - list [ref=e1861]:
+                - listitem [ref=e1862]:
+                  - generic [ref=e1863]: ✓
+                  - text: Hover slice
+                - listitem [ref=e1864]:
+                  - generic [ref=e1865]: ✓
+                  - text: Click slice
+                - listitem [ref=e1866]:
+                  - generic [ref=e1867]: ✓
+                  - text: Verify category
+                - listitem [ref=e1868]:
+                  - generic [ref=e1869]: ✓
+                  - text: Validate percentage
+                - listitem [ref=e1870]:
+                  - generic [ref=e1871]: ✓
+                  - text: Verify tooltip
+              - generic [ref=e1872]:
+                - generic [ref=e1873]: SVG Path
+                - generic [ref=e1874]: Transform
+                - generic [ref=e1875]: Fill
+                - generic [ref=e1876]: Stroke
+                - generic [ref=e1877]: Hover
+        - generic [ref=e1879]:
+          - generic [ref=e1880]:
+            - heading "Interactive Seat Booking Map" [level=2] [ref=e1882]
+            - paragraph [ref=e1883]: A theatre-style seat map. Click an available seat to select it, click again to release it.
+            - img "Seat booking map" [ref=e1884]:
+              - generic [ref=e1885] [cursor=pointer]
+              - generic [ref=e1886] [cursor=pointer]
+              - generic [ref=e1887] [cursor=pointer]
+              - generic [ref=e1888] [cursor=pointer]
+              - generic: A1
+              - generic: A2
+              - generic: A3
+              - generic: A4
+              - generic: A5
+              - generic [ref=e1890] [cursor=pointer]
+              - generic [ref=e1892] [cursor=pointer]
+              - generic [ref=e1893] [cursor=pointer]
+              - generic [ref=e1894] [cursor=pointer]
+              - generic: B1
+              - generic: B2
+              - generic: B3
+              - generic: B4
+              - generic: B5
+              - generic [ref=e1895] [cursor=pointer]
+              - generic [ref=e1896] [cursor=pointer]
+              - generic [ref=e1897] [cursor=pointer]
+              - generic [ref=e1899] [cursor=pointer]
+              - generic: C1
+              - generic: C2
+              - generic: C3
+              - generic: C4
+              - generic: C5
+            - generic [ref=e1900]:
+              - generic [ref=e1901]: Available
+              - generic [ref=e1903]: Occupied
+              - generic [ref=e1905]: Selected
+            - generic [ref=e1907]:
+              - paragraph [ref=e1908]: "Available: 12 · Occupied: 3"
+              - paragraph [ref=e1909]: "Selected Seats: none"
+            - generic [ref=e1910]:
+              - paragraph [ref=e1911]: Automation Objectives
+              - list [ref=e1912]:
+                - listitem [ref=e1913]:
+                  - generic [ref=e1914]: ✓
+                  - text: Count available
+                - listitem [ref=e1915]:
+                  - generic [ref=e1916]: ✓
+                  - text: Count occupied
+                - listitem [ref=e1917]:
+                  - generic [ref=e1918]: ✓
+                  - text: Select seat
+                - listitem [ref=e1919]:
+                  - generic [ref=e1920]: ✓
+                  - text: Verify color change
+                - listitem [ref=e1921]:
+                  - generic [ref=e1922]: ✓
+                  - text: Validate summary
+              - generic [ref=e1923]:
+                - generic [ref=e1924]: SVG Rect
+                - generic [ref=e1925]: Dynamic Classes
+                - generic [ref=e1926]: Fill
+                - generic [ref=e1927]: Stroke
+                - generic [ref=e1928]: Coordinate Selection
+          - generic [ref=e1929]:
+            - heading "Interactive SVG World Map" [level=2] [ref=e1931]
+            - paragraph [ref=e1932]: A simplified world map. Hover a region for its name, click to select it.
+            - img "Simplified interactive world map" [ref=e1933]:
+              - generic [ref=e1934] [cursor=pointer]
+              - generic [ref=e1935] [cursor=pointer]
+              - generic [ref=e1936] [cursor=pointer]
+              - generic [ref=e1937] [cursor=pointer]
+              - generic [ref=e1938] [cursor=pointer]
+              - generic [ref=e1939] [cursor=pointer]
+              - generic [ref=e1940] [cursor=pointer]
+              - generic: USA
+              - generic: BRA
+              - generic: UK
+              - generic: AFR
+              - generic: IND
+              - generic: CHN
+              - generic: AUS
+            - generic [ref=e1941]:
+              - paragraph [ref=e1942]: Hover a region to see its name
+              - paragraph [ref=e1943]: "Selected Country: none"
+            - generic [ref=e1944]:
+              - paragraph [ref=e1945]: Automation Objectives
+              - list [ref=e1946]:
+                - listitem [ref=e1947]:
+                  - generic [ref=e1948]: ✓
+                  - text: Hover country
+                - listitem [ref=e1949]:
+                  - generic [ref=e1950]: ✓
+                  - text: Click country
+                - listitem [ref=e1951]:
+                  - generic [ref=e1952]: ✓
+                  - text: Verify tooltip
+                - listitem [ref=e1953]:
+                  - generic [ref=e1954]: ✓
+                  - text: Verify selected country
+                - listitem [ref=e1955]:
+                  - generic [ref=e1956]: ✓
+                  - text: Validate highlighted region
+              - generic [ref=e1957]:
+                - generic [ref=e1958]: SVG Path
+                - generic [ref=e1959]: Hover
+                - generic [ref=e1960]: Dynamic Fill
+                - generic [ref=e1961]: Complex Selectors
+      - generic [ref=e1963]:
+        - paragraph [ref=e1964]: Module 10
+        - heading "Labs & Real-World Automation" [level=2] [ref=e1965]
+        - paragraph [ref=e1966]: Explore complete automation labs covering authentication, security, browser internals, network behaviour, real-world applications, and advanced automation scenarios.
+      - generic [ref=e1968]:
+        - paragraph [ref=e1969]: Each card opens a standalone application or lab in a new tab. This page stays open behind it.
+        - generic [ref=e1970]:
+          - generic [ref=e1971]:
+            - paragraph [ref=e1972]: Authentication State Lab
+            - paragraph [ref=e1973]: Capture a signed-in storage state once and reuse it across tests.
+            - link "Open Lab" [ref=e1974] [cursor=pointer]:
+              - /url: /authentication-state-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e1975]: ↗
+          - generic [ref=e1976]:
+            - paragraph [ref=e1977]: Automation Challenge Arena
+            - paragraph [ref=e1978]: Game-based automation challenges, including Memory Matrix and SVG Spell Bee.
+            - link "Open Arena" [ref=e1979] [cursor=pointer]:
+              - /url: /arena.html
+              - text: Open Arena
+              - generic [aria-hidden] [ref=e1980]: ↗
+          - generic [ref=e1981]:
+            - paragraph [ref=e1982]: CAPTCHA Lab
+            - paragraph [ref=e1983]: Work through challenge-token flows and understand where automation legitimately stops.
+            - link "Open Lab" [ref=e1984] [cursor=pointer]:
+              - /url: /captcha-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e1985]: ↗
+          - generic [ref=e1986]:
+            - paragraph [ref=e1987]: Commerce
+            - paragraph [ref=e1988]: A complete storefront-to-checkout journey backed by a real API and real order data.
+            - link "Open App" [ref=e1989] [cursor=pointer]:
+              - /url: /shop.html
+              - text: Open App
+              - generic [aria-hidden] [ref=e1990]: ↗
+          - generic [ref=e1991]:
+            - paragraph [ref=e1992]: Cookies Lab
+            - paragraph [ref=e1993]: Read, set, and assert on cookies; persist and restore storage state.
+            - link "Open Lab" [ref=e1994] [cursor=pointer]:
+              - /url: /cookies-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e1995]: ↗
+          - generic [ref=e1996]:
+            - paragraph [ref=e1997]: Honeypot Lab
+            - paragraph [ref=e1998]: Detect and avoid hidden trap fields designed to catch bots.
+            - link "Open Lab" [ref=e1999] [cursor=pointer]:
+              - /url: /honeypot-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2000]: ↗
+          - generic [ref=e2001]:
+            - paragraph [ref=e2002]: HTTP Status Lab
+            - paragraph [ref=e2003]: Drive and assert on the full range of HTTP status codes and retry behaviour.
+            - link "Open Lab" [ref=e2004] [cursor=pointer]:
+              - /url: /http-status-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2005]: ↗
+          - generic [ref=e2006]:
+            - paragraph [ref=e2007]: Locators Lab
+            - paragraph [ref=e2008]: Confidently select any element with the right strategy.
+            - link "Open Lab" [ref=e2009] [cursor=pointer]:
+              - /url: /locators-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2010]: ↗
+          - generic [ref=e2011]:
+            - paragraph [ref=e2012]: Network Lab
+            - paragraph [ref=e2013]: Intercept, mock, and route requests; assert on payloads and headers.
+            - link "Open Lab" [ref=e2014] [cursor=pointer]:
+              - /url: /network-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2015]: ↗
+          - generic [ref=e2016]:
+            - paragraph [ref=e2017]: OTP Lab
+            - paragraph [ref=e2018]: Automate time-based one-time-password flows deterministically.
+            - link "Open Lab" [ref=e2019] [cursor=pointer]:
+              - /url: /otp-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2020]: ↗
+          - generic [ref=e2021]:
+            - paragraph [ref=e2022]: Proxy & SSL Lab
+            - paragraph [ref=e2023]: Route traffic through proxies and reason about certificates and TLS.
+            - link "Open Lab" [ref=e2024] [cursor=pointer]:
+              - /url: /proxy-ssl-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2025]: ↗
+          - generic [ref=e2026]:
+            - paragraph [ref=e2027]: Shadow DOM Lab
+            - paragraph [ref=e2028]: Automate web components and pierce shadow roots reliably.
+            - link "Open Lab" [ref=e2029] [cursor=pointer]:
+              - /url: /shadow-dom-lab.html
+              - text: Open Lab
+              - generic [aria-hidden] [ref=e2030]: ↗
+          - generic [ref=e2031]:
+            - paragraph [ref=e2032]: CineVerse
+            - paragraph [ref=e2033]: A full cinema-booking application — browse films, pick seats, and complete a booking.
+            - link "Open App" [ref=e2034] [cursor=pointer]:
+              - /url: /cineverse/index.html
+              - text: Open App
+              - generic [aria-hidden] [ref=e2035]: ↗
+          - generic [ref=e2036]:
+            - paragraph [ref=e2037]: OAuth Platform
+            - paragraph [ref=e2038]: A standards-based OAuth2 / OIDC authorization server with its own isolated identity system.
+            - link "Open App" [ref=e2039] [cursor=pointer]:
+              - /url: /oauth/
+              - text: Open App
+              - generic [aria-hidden] [ref=e2040]: ↗
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Handle alerts and prompts', async ({ page }) => {
+> 4  |   await page.goto(
+     |              ^ Error: page.goto: Test timeout of 30000ms exceeded.
+  5  |     'https://www.playwrightautomation.com/practice.html#section-alerts'
+  6  |   );
+  7  | 
+  8  |   async function acceptDialog(button, expectedType, expectedMessage, response) {
+  9  |     let info;
+  10 | 
+  11 |     page.once('dialog', async dialog => {
+  12 |       info = {
+  13 |         type: dialog.type(),
+  14 |         message: dialog.message(),
+  15 |       };
+  16 | 
+  17 |       if (response === undefined) {
+  18 |         await dialog.accept();
+  19 |       } else {
+  20 |         await dialog.accept(response);
+  21 |       }
+  22 |     });
+  23 | 
+  24 |     await button.click();
+  25 | 
+  26 |     expect(info.type).toBe(expectedType);
+  27 |     if (expectedMessage) {
+  28 |       expect(info.message).toBe(expectedMessage);
+  29 |     }
+  30 |   }
+  31 | 
+  32 |   await acceptDialog(
+  33 |     page.getByTestId('btn-simple-alert'),
+  34 |     'alert',
+  35 |     'I am an alert box!'
+  36 |   );
+  37 | 
+  38 |   await acceptDialog(
+  39 |     page.getByRole('button', { name: 'Confirmation Alert' }),
+  40 |     'confirm'
+  41 |   );
+  42 | 
+  43 |   await acceptDialog(
+  44 |     page.getByRole('button', { name: 'Prompt Alert' }),
+  45 |     'prompt',
+  46 |     'Please enter your name:',
+  47 |     'Rajesh'
+  48 |   );
+  49 | });
+```

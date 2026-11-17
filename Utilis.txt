@@ -1,0 +1,38 @@
+Steps to Generate an Allure Report with Playwright
+Step 1: Configure the reporters in playwright.config.js
+
+Add this inside defineConfig to generate both the Playwright HTML report and Allure results:
+reporter: [
+  ['html', { outputFolder: 'playwright-report', open: 'never' }],
+  ['allure-playwright', { resultsDir: 'allure-results' }]
+],
+Make sure allure-playwright and allure are installed in the project. (Allure Playwright setup)
+
+Step 2: Run your tests
+npx playwright test
+To run only Chromium with the browser visible:
+npx playwright test --project=chromium --headed
+
+Step 3: Generate the Allure HTML report
+npx allure generate .\allure-results
+
+Step 4: Open the report
+npx allure open .\allure-report
+
+
+
+Run commands
+npx playwright test tests/Alerts_Popups.spec.js --project=chromium --headed
+npx playwright test tests/Basic_Form_Elements.spec.js --project=chromium --headed
+npx playwright test tests/Button_Interaction.spec.js --project=chromium --headed
+npx playwright test tests/Calenders_datepickers.spec.js --project=chromium --headed
+npx playwright test tests/Checkboxes_Radio_Buttons.spec.js --project=chromium --headed
+npx playwright test tests/downloadFiles.spec.js --project=chromium --headed
+npx playwright test tests/Dropdowns.spec.js --project=chromium --headed
+npx playwright test tests/File_Handling.spec.js --project=chromium --headed
+npx playwright test tests/Keyboard_Action_And_Scrolling.spec.js --project=chromium --headed
+npx playwright test tests/Mouse_Action.spec.js --project=chromium --headed
+npx playwright test tests/Tab_vs_Window.spec.js --project=chromium --headed
+npx playwright test tests/tables.spec.js --project=chromium --headed
+
+

@@ -1,0 +1,87 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Checkboxes_Radio_Buttons.spec.js >> Checkboxes and Radio Buttons
+- Location: tests\Checkboxes_Radio_Buttons.spec.js:3:5
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://sreenidhirajakrishnan.in/
+Call log:
+  - navigating to "https://sreenidhirajakrishnan.in/", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Check if there is a typo in sreenidhirajakrishnan.in.
+    - generic [ref=e9]:
+      - paragraph
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - text: If spelling is correct,
+          - link "try running Windows Network Diagnostics" [ref=e12] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+          - text: .
+    - generic [ref=e13]: DNS_PROBE_FINISHED_NXDOMAIN
+  - button "Reload" [ref=e16] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Checkboxes and Radio Buttons', async ({ page }) => {
+> 4  |   await page.goto('https://sreenidhirajakrishnan.in/');
+     |              ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://sreenidhirajakrishnan.in/
+  5  | 
+  6  |   await page.getByRole('button', { name: 'Interview Prep' }).hover();
+  7  |   await page.getByRole('link', { name: 'Practice Hub', exact: true }).click();
+  8  |   await expect(page).toHaveURL('https://sreenidhirajakrishnan.in/practice');
+  9  | 
+  10 |   const selectAll = page.getByRole('checkbox', {
+  11 |     name: 'Select all checkboxes',
+  12 |   });
+  13 |   const checkboxes = ['Checkbox A', 'Checkbox B', 'Checkbox C'].map(name =>
+  14 |     page.getByRole('checkbox', { name })
+  15 |   );
+  16 | 
+  17 |   await selectAll.check();
+  18 | 
+  19 |   for (const checkbox of checkboxes) {
+  20 |     await expect(checkbox).toBeChecked();
+  21 |   }
+  22 | 
+  23 |   await selectAll.uncheck();
+  24 | 
+  25 |   for (const checkbox of checkboxes) {
+  26 |     await expect(checkbox).not.toBeChecked();
+  27 |   }
+  28 | 
+  29 |   const radioOne = page.getByRole('radio', { name: 'Radio one' });
+  30 |   const radioTwo = page.getByRole('radio', { name: 'Radio two' });
+  31 | 
+  32 |   await radioOne.check();
+  33 |   await expect(radioOne).toBeChecked();
+  34 |   await expect(page.getByTestId('radio-result')).toContainText('Selected: one');
+  35 | 
+  36 |   await radioTwo.check();
+  37 |   await expect(radioTwo).toBeChecked();
+  38 |   await expect(radioOne).not.toBeChecked();
+  39 |   await expect(page.getByTestId('radio-result')).toContainText('Selected: two');
+  40 | 
+  41 |   await page.getByRole('checkbox', { name: 'Reveal checkbox' }).check();
+  42 |   await expect(page.getByText('Hidden text is now visible!')).toBeVisible();
+  43 | });
+```
